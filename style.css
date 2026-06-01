@@ -1938,3 +1938,21 @@ footer {
     padding: 36px 20px;
   }
 }
+
+/* Donation QR Image Styling */
+.donation-qr-image {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px auto;
+  border: 3px solid var(--border-color);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  filter: none;
+  opacity: 1;
+}
+

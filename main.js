@@ -468,6 +468,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Simple validation checks (only enforce core fields)
       if (!name || phone.length < 10 || !city || !state || !profession || !role) {
+        const errorAlert = document.getElementById('join-alert-error');
+        if (errorAlert) {
+          errorAlert.textContent = 'कृपया सभी आवश्यक फ़ील्ड सही-सही भरें।';
+        }
         showAlert('join-alert-success', 'join-alert-error', false);
         return;
       }
@@ -488,16 +492,57 @@ document.addEventListener('DOMContentLoaded', () => {
         date: new Date().toISOString()
       };
 
-      // Mock submit saving to localStorage
-      let registrations = JSON.parse(localStorage.getItem('yms_registrations') || '[]');
-      registrations.push(registrationData);
-      localStorage.setItem('yms_registrations', JSON.stringify(registrations));
+      // Submit to Web3Forms
+      const submitBtn = joinForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.textContent : 'युवा मंच संगठन से जुड़ें';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'सबमिट हो रहा है...';
+      }
 
-      console.log('New Registration Submitted:', registrationData);
-      
-      // Show success alert & reset form
-      showAlert('join-alert-success', 'join-alert-error', true);
-      joinForm.reset();
+      const formData = new FormData(joinForm);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          const successAlert = document.getElementById('join-alert-success');
+          if (successAlert) {
+            successAlert.textContent = 'आपका फॉर्म सफलतापूर्वक सबमिट हो गया है। हमारी टीम जल्द संपर्क करेगी।';
+          }
+          showAlert('join-alert-success', 'join-alert-error', true);
+          
+          // Also save to localStorage as backup
+          let registrations = JSON.parse(localStorage.getItem('yms_registrations') || '[]');
+          registrations.push(registrationData);
+          localStorage.setItem('yms_registrations', JSON.stringify(registrations));
+          
+          joinForm.reset();
+        } else {
+          const errorAlert = document.getElementById('join-alert-error');
+          if (errorAlert) {
+            errorAlert.textContent = 'कुछ समस्या हुई। कृपया दोबारा प्रयास करें।';
+          }
+          showAlert('join-alert-success', 'join-alert-error', false);
+        }
+      })
+      .catch(error => {
+        console.error('Error submitting registration form:', error);
+        const errorAlert = document.getElementById('join-alert-error');
+        if (errorAlert) {
+          errorAlert.textContent = 'कुछ समस्या हुई। कृपया दोबारा प्रयास करें।';
+        }
+        showAlert('join-alert-success', 'join-alert-error', false);
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+      });
     });
   }
 
@@ -531,6 +576,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = document.getElementById('contact-message').value.trim();
 
       if (!name || phone.length < 10 || !email || !location || !subject || !message) {
+        const errorAlert = document.getElementById('contact-alert-error');
+        if (errorAlert) {
+          errorAlert.textContent = 'कृपया सभी आवश्यक फ़ील्ड सही-सही भरें।';
+        }
         showAlert('contact-alert-success', 'contact-alert-error', false);
         return;
       }
@@ -546,16 +595,57 @@ document.addEventListener('DOMContentLoaded', () => {
         date: new Date().toISOString()
       };
 
-      // Mock submit saving to localStorage
-      let messages = JSON.parse(localStorage.getItem('yms_messages') || '[]');
-      messages.push(messageData);
-      localStorage.setItem('yms_messages', JSON.stringify(messages));
+      // Submit to Web3Forms
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.textContent : 'संदेश भेजें';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'भेजा जा रहा है...';
+      }
 
-      console.log('New Contact Message Submitted:', messageData);
-      
-      // Show success alert & reset form
-      showAlert('contact-alert-success', 'contact-alert-error', true);
-      contactForm.reset();
+      const formData = new FormData(contactForm);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          const successAlert = document.getElementById('contact-alert-success');
+          if (successAlert) {
+            successAlert.textContent = 'आपका फॉर्म सफलतापूर्वक सबमिट हो गया है। हमारी टीम जल्द संपर्क करेगी।';
+          }
+          showAlert('contact-alert-success', 'contact-alert-error', true);
+          
+          // Save to localStorage as backup
+          let messages = JSON.parse(localStorage.getItem('yms_messages') || '[]');
+          messages.push(messageData);
+          localStorage.setItem('yms_messages', JSON.stringify(messages));
+          
+          contactForm.reset();
+        } else {
+          const errorAlert = document.getElementById('contact-alert-error');
+          if (errorAlert) {
+            errorAlert.textContent = 'कुछ समस्या हुई। कृपया दोबारा प्रयास करें।';
+          }
+          showAlert('contact-alert-success', 'contact-alert-error', false);
+        }
+      })
+      .catch(error => {
+        console.error('Error submitting contact form:', error);
+        const errorAlert = document.getElementById('contact-alert-error');
+        if (errorAlert) {
+          errorAlert.textContent = 'कुछ समस्या हुई। कृपया दोबारा प्रयास करें।';
+        }
+        showAlert('contact-alert-success', 'contact-alert-error', false);
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+      });
     });
   }
 
