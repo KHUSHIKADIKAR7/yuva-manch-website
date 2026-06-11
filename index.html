@@ -1,1342 +1,1101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CORPORA is a student-focused Career Readiness and Industry-Academia platform helping students become industry-ready through practical training, mentorship, and support.">
-  <meta name="keywords" content="Career Readiness, Student Placement, Industry-Academia, Practical Training, Mentorship, Skill Assessment, Corpora">
-  <meta name="author" content="CORPORA">
-  <title>CORPORA | Build the Bridge Between Learning and Industry</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/corpora-logo.png.png">
-
-  <!-- Style File -->
+  <title>Yuva Manch Sangathan</title>
+  <meta name="description" content="युवा मंच संगठन एक सामाजिक संगठन है, जो समाज सेवा, जनहित, शिक्षा, जागरूकता और जरूरतमंद लोगों की सहायता के लिए कार्य करता है।">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="shortcut icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="corporaIntro" class="corpora-intro-loader">
-  <div class="corpora-intro-content">
 
-    <div class="corpora-bridge-scene">
-      <div class="bridge-block left-block">Education</div>
+  <!-- ==========================================
+       HEADER & NAVIGATION MENU
+       ========================================== -->
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo-container">
+        <!-- EDITABLE: Replace logo.png with your logo file if needed -->
+        <img src="logo.png" alt="युवा मंच संगठन लोगो" id="website-logo">
+        <div class="brand-text">
+          <span class="brand-name">युवा मंच संगठन</span>
+          <span class="brand-tagline">अपनी बात सबके साथ | समाज सेवा | युवा शक्ति</span>
+        </div>
+      </a>
 
-      <div class="bridge-center">
-        <svg class="bridge-svg" viewBox="0 0 320 120" aria-hidden="true">
-          <path class="bridge-arc-base" d="M20 90 Q160 18 300 90" />
-          <path class="bridge-arc-draw" d="M20 90 Q160 18 300 90" />
-        </svg>
-        <div class="bridge-travel-dot"></div>
-      </div>
-
-      <div class="bridge-block right-block">Industry</div>
+      <!-- Main Navigation Menu -->
+      <nav>
+        <button class="hamburger" id="hamburger-menu" aria-label="Menu Toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-links">
+          <li><a href="#home" class="nav-link active" data-view="home">होम</a></li>
+          <li><a href="#about" class="nav-link" data-view="about">हमारे बारे में</a></li>
+          <li><a href="#work" class="nav-link" data-view="work">हमारे कार्य</a></li>
+          <li><a href="#founder" class="nav-link" data-view="founder">संस्थापक संदेश</a></li>
+          <li><a href="#media-coverage" class="nav-link" data-view="media-coverage">मीडिया कवरेज</a></li>
+          <li><a href="#donation" class="nav-link" data-view="donation">सहयोग करें</a></li>
+          <li><a href="#join" class="nav-link" data-view="join">हमसे जुड़ें</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <h1>CORPORA</h1>
-    <p>Bridging Education & Industry</p>
-  </div>
-</div>
-      <!-- 1. Embedded Header & Hero Wrapper -->
-  <main>
-    <!-- 2. Combined Frame Hero Section -->
-    <section id="home" class="hero-outer-frame" aria-label="Introduction">
-      <style>
-        .hero-outer-frame {
-          background-color: #EEF3F7;
-          width: 100%;
-          height: auto !important;
-          padding: 12px 18px 12px;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          position: relative;
-        }
-
-        /* Header Row Styles */
-        .hero-header-row {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          height: auto;
-          min-height: 56px;
-          margin-bottom: 8px;
-          width: 100%;
-          box-sizing: border-box;
-          z-index: 100;
-          background-color: rgba(37, 99, 235, 0.08);
-          border: 1px solid rgba(37, 99, 235, 0.12);
-          border-radius: 999px;
-          box-shadow: 0 4px 16px rgba(37, 99, 235, 0.06);
-          padding: 1px 10px 1px 10px;
-        }
-
-        .hero-header-left-pill {
-          background-color: transparent;
-          border-radius: 999px;
-          padding: 6px 20px 6px 16px;
-          height: 54px;
-          display: flex;
-          align-items: center;
-          gap: 26px;
-          box-shadow: none;
-          border: none;
-          box-sizing: border-box;
-        }
-
-        .hero-logo-link {
-          display: flex;
-          align-items: center;
-          height: 100%;
-        }
-
-        .hero-logo-img {
-          height: 32px;
-          width: auto;
-          display: block;
-          object-fit: contain;
-          mix-blend-mode: multiply;
-        }
-
-        .hero-desktop-nav {
-          display: flex;
-          align-items: center;
-          gap: 26px;
-        }
-
-        .hero-nav-link {
-          font-family: var(--font-heading);
-          font-size: 14.5px;
-          font-weight: 600;
-          color: var(--brand-navy, #0f172a);
-          text-decoration: none;
-          transition: color 0.25s ease;
-          position: relative;
-        }
-
-        .hero-nav-link:hover {
-          color: var(--brand-primary, #2563eb);
-        }
-
-        .hero-nav-link.active {
-          display: inline-flex;
-          align-items: center;
-          background-color: rgba(37, 99, 235, 0.14);
-          color: var(--brand-primary, #2563eb);
-          padding: 6px 14px;
-          border-radius: 999px;
-          font-family: var(--font-heading);
-          font-weight: 700;
-          letter-spacing: 0.02em;
-          text-decoration: none;
-          border: none;
-        }
-
-        .hero-register-pill {
-          background-color: transparent;
-          border-radius: 999px;
-          height: 54px;
-          padding: 0 24px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          font-family: var(--font-heading);
-          font-weight: 700;
-          font-size: 14.5px;
-          color: var(--brand-primary, #2563eb);
-          text-decoration: none;
-          border: none;
-          box-shadow: none;
-          transition: all 0.25s ease;
-          box-sizing: border-box;
-        }
-
-        .hero-register-pill:hover {
-          background-color: rgba(37, 99, 235, 0.12);
-          color: var(--brand-primary, #2563eb);
-          transform: translateY(-1px);
-          box-shadow: none;
-        }
-
-        .hero-menu-toggle-wrapper {
-          display: none;
-          position: relative;
-        }
-
-        /* Grid Layout Styles - Wide Banner Grid */
-        .hero-grid-container {
-          display: grid;
-          grid-template-columns: 1fr auto;
-          gap: 32px;
-          height: auto !important; /* height decided by children naturally */
-          width: 100%;
-          box-sizing: border-box;
-          align-items: center;
-        }
-
-        /* Left Image Card - Wider Area */
-        .hero-left-image-card {
-          background-color: transparent; /* transparent, no green gaps */
-          border-radius: 28px;
-          overflow: hidden;
-          position: relative;
-          width: 100%;
-          height: auto;
-          line-height: 0;
-          box-sizing: border-box;
-          border: 1px solid rgba(15, 23, 42, 0.04);
-          transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .hero-image-slide {
-          position: absolute;
-          inset: 0;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
-          height: 100%;
-          width: 100%;
-        }
-
-        .hero-image-slide.active {
-          position: relative;
-          inset: auto;
-          height: auto;
-          width: 100%;
-          opacity: 1;
-          visibility: visible;
-          z-index: 1;
-        }
-
-        .hero-slide-img {
-          width: 100%;
-          height: auto;
-          max-width: 100%;
-          object-fit: contain;
-          object-position: center center;
-        }
-
-        /* Right Content Area - White Rounded Card */
-        .hero-right-content-card {
-          background-color: #ffffff;
-          border-radius: 28px;
-          padding: 40px 50px;
-          box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
-          border: 1px solid rgba(15, 23, 42, 0.06);
-          position: relative;
-          height: 390px !important;
-          max-height: 390px !important;
-          min-height: 390px !important;
-          width: 520px !important;
-          max-width: 520px !important;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-self: center;
-        }
-
-        .hero-content-slide {
-          position: absolute;
-          top: 36px;
-          bottom: 66px;
-          left: 50px;
-          right: 50px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
-          opacity: 0;
-          visibility: hidden;
-          transform: translateY(15px);
-          transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
-        }
-
-        .hero-content-slide.active {
-          opacity: 1;
-          visibility: visible;
-          transform: translateY(0);
-          z-index: 2;
-        }
-
-        .hero-card-label {
-          background-color: rgba(37, 99, 235, 0.08);
-          color: var(--brand-primary, #2563eb);
-          padding: 6px 14px;
-          font-size: 13px;
-          font-weight: 700;
-          border-radius: 999px;
-          margin-bottom: 12px;
-          font-family: var(--font-heading);
-          letter-spacing: 0.02em;
-          text-transform: uppercase;
-        }
-
-        .hero-card-heading {
-          font-family: var(--font-heading);
-          font-size: clamp(1.8rem, 2.6vw, 2.2rem);
-          font-weight: 800;
-          color: var(--brand-navy, #0f172a);
-          line-height: 1.2;
-          margin-bottom: 10px;
-          margin-top: 0;
-          letter-spacing: -0.02em;
-        }
-
-        .hero-card-text {
-          font-family: var(--font-body);
-          font-size: 14.5px;
-          color: var(--text-secondary, #475569);
-          line-height: 1.6;
-          margin-bottom: 18px;
-          margin-top: 0;
-        }
-
-        .hero-card-cta {
-          background-color: var(--brand-primary, #2563eb);
-          color: #ffffff;
-          padding: 13px 26px;
-          border-radius: 12px;
-          font-family: var(--font-heading);
-          font-weight: 700;
-          font-size: 14.5px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          text-decoration: none;
-          box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
-          transition: all 0.25s ease;
-          box-sizing: border-box;
-          border: 1.5px solid var(--brand-primary, #2563eb);
-        }
-
-        .hero-card-cta:hover {
-          background-color: #1d4ed8;
-          border-color: #1d4ed8;
-          transform: translateY(-1px);
-          box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
-        }
-
-        /* Subtle indicator dots below the text content */
-        .hero-slider-dots {
-          position: absolute;
-          bottom: 30px;
-          left: 50px;
-          display: flex;
-          gap: 8px;
-          z-index: 10;
-        }
-
-        .hero-dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          border: none;
-          background-color: #cbd5e1;
-          cursor: pointer;
-          padding: 0;
-          transition: all 0.3s ease;
-        }
-
-        .hero-dot.active {
-          background-color: var(--brand-primary, #2563eb);
-          width: 24px;
-          border-radius: 4px;
-        }
-
-        /* --- Responsive Styles --- */
-        @media (max-width: 991px) {
-          .hero-outer-frame {
-            padding: 12px 14px 16px;
-            height: auto;
-            min-height: auto;
-          }
-
-          .hero-header-row {
-            height: 48px;
-            margin-bottom: 12px;
-          }
-
-          .hero-header-left-pill {
-            height: 46px;
-            padding: 4px 14px;
-          }
-
-          .hero-logo-img {
-            height: 26px;
-          }
-
-          .hero-desktop-nav {
-            display: none;
-          }
-
-          .hero-register-pill {
-            height: 46px;
-            padding: 0 16px;
-            font-size: 13px;
-          }
-
-          .hero-grid-container {
-            grid-template-columns: 1fr;
-            height: auto;
-            min-height: auto;
-            gap: 20px;
-          }
-
-          .hero-left-image-card {
-            height: auto;
-            border-radius: 20px;
-          }
-
-          .hero-right-content-card {
-            height: 360px;
-            position: relative;
-            background-color: #ffffff;
-            border-radius: 20px;
-            padding: 32px;
-            border: 1px solid rgba(15, 23, 42, 0.06);
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-            width: 100% !important;
-            max-width: 100% !important;
-          }
-
-          .hero-content-slide {
-            inset: 32px;
-          }
-
-          .hero-slider-dots {
-            bottom: 32px;
-            left: 32px;
-          }
-        }
-
-        @media (max-width: 767px) {
-          .hero-left-image-card {
-            height: auto;
-            border-radius: 16px;
-          }
-
-          .hero-right-content-card {
-            height: 320px;
-            padding: 24px;
-            border-radius: 16px;
-          }
-
-          .hero-content-slide {
-            inset: 24px;
-          }
-
-          .hero-slider-dots {
-            bottom: 24px;
-            left: 24px;
-          }
-
-          .hero-card-heading {
-            font-size: 22px;
-            margin-bottom: 10px;
-          }
-
-          .hero-card-text {
-            font-size: 13.5px;
-            margin-bottom: 18px;
-            line-height: 1.5;
-          }
-
-          .hero-card-cta {
-            padding: 10px 20px;
-            font-size: 13.5px;
-          }
-
-          /* Show Menu hamburger button on mobile header instead of desktop register pill */
-          .hero-register-pill {
-            display: none;
-          }
-
-          .hero-menu-toggle-wrapper {
-            display: block;
-          }
-
-          /* Mobile Menu Toggle Button */
-          .hero-menu-toggle-btn {
-            height: 44px;
-            padding: 0 16px;
-            border-radius: 999px;
-            font-family: var(--font-heading);
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--brand-primary, #2563eb);
-            background-color: transparent;
-            border: none;
-            box-shadow: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-sizing: border-box;
-          }
-
-          .hero-menu-toggle-btn:hover,
-          .hero-menu-toggle-btn.open {
-            background-color: rgba(37, 99, 235, 0.12);
-            color: var(--brand-primary, #2563eb);
-            border: none;
-          }
-
-          .hero-menu-toggle-btn span {
-            color: inherit;
-          }
-
-          .hero-menu-toggle-btn .toggle-icon {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 14px;
-            height: 10px;
-          }
-
-          .hero-menu-toggle-btn .toggle-icon span {
-            display: block;
-            width: 100%;
-            height: 2px;
-            background-color: currentColor;
-            transition: all 0.3s ease;
-          }
-
-          .hero-menu-toggle-btn.open .toggle-icon span:first-child {
-            transform: translateY(4px) rotate(45deg);
-          }
-
-          .hero-menu-toggle-btn.open .toggle-icon span:last-child {
-            transform: translateY(-4px) rotate(-45deg);
-          }
-
-          /* Dropdown Menu Drawer positioning on mobile */
-          .menu-dropdown {
-            position: absolute;
-            top: calc(100% + 8px);
-            right: 0;
-            width: 240px;
-            background-color: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 15px 40px rgba(9, 14, 26, 0.12);
-            border: 1px solid rgba(15, 23, 42, 0.06);
-            display: flex;
-            flex-direction: column;
-            padding: 16px;
-            box-sizing: border-box;
-            z-index: 150;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-          }
-
-          .menu-dropdown.open {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-          }
-
-          .dropdown-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-          }
-
-          .dropdown-link {
-            font-family: var(--font-heading);
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--brand-navy, #0f172a);
-            text-decoration: none;
-            display: block;
-            transition: color 0.25s ease;
-          }
-
-          .dropdown-link:hover,
-          .dropdown-link.active {
-            color: var(--brand-primary, #2563eb);
-          }
-
-          .dropdown-divider {
-            height: 1px;
-            background-color: rgba(15, 23, 42, 0.06);
-            margin: 12px 0;
-          }
-
-          .dropdown-cta-btn {
-            background-color: var(--brand-primary, #2563eb);
-            color: #ffffff;
-            border-radius: 10px;
-            padding: 10px;
-            text-align: center;
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 13px;
-            text-decoration: none;
-            transition: background-color 0.25s ease;
-          }
-
-          .dropdown-cta-btn:hover {
-            background-color: #1d4ed8;
-          }
-        }
-      </style>
-
-      <!-- 1. Header Row -->
-      <div class="hero-header-row">
-        <!-- Left White Pill: Logo + Desktop Navigation -->
-        <div class="hero-header-left-pill">
-          <a href="index.html" class="hero-logo-link">
-            <img src="assets/images/corpora-logo.png.png" alt="CORPORA Logo" class="hero-logo-img">
-          </a>
-          <nav class="hero-desktop-nav">
-            <a href="index.html" class="hero-nav-link active">Home</a>
-            <a href="about.html" class="hero-nav-link">About</a>
-            <a href="students.html" class="hero-nav-link">Students</a>
-            <a href="institutions.html" class="hero-nav-link">Institutions</a>
-            <a href="industry-connect.html" class="hero-nav-link">Industry Connect</a>
-            <a href="contact.html" class="hero-nav-link">Contact</a>
-          </nav>
-        </div>
-
-        <!-- Right White Pill: Register Button (Desktop) -->
-        <a href="students.html" class="hero-register-pill">Register</a>
-
-        <!-- Mobile Menu Toggle Button (Mobile/Tablet only) -->
-        <div class="hero-menu-toggle-wrapper">
-          <button class="hero-menu-toggle-btn" id="menu-dropdown-toggle" aria-label="Toggle Menu" aria-expanded="false">
-            <span>Menu</span>
-            <div class="toggle-icon">
-              <span></span>
-              <span></span>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- ==========================================
+         VIEW 1: HOME PAGE
+         ========================================== -->
+    <div id="home" class="view-section active">
+<!-- Hero Section -->
+      <div class="hero-section">
+        <div class="container">
+          <div class="hero-grid-split">
+            
+            <!-- Left Content -->
+            <div class="hero-left-content">
+              <div class="hero-pill-badge">✨ समाज सेवा • युवा शक्ति • जनहित</div>
+              <h1 class="hero-main-title">
+                युवा मंच<br><span class="highlight-orange">संगठन</span>
+              </h1>
+              <p class="hero-tagline-text">समाज सेवा, युवा शक्ति और जनहित की जिम्मेदार आवाज</p>
+              <p class="hero-paragraph-text">
+                युवा मंच संगठन युवाओं को समाज सेवा, जनसेवा, प्राणी सेवा, जागरूकता और जनहित के कार्यों से जोड़ने वाला गैर-राजनीतिक सामाजिक संगठन है। हमारा उद्देश्य युवाओं को जिम्मेदार नागरिक बनाकर समाज, राष्ट्रहित और मानवता के लिए सकारात्मक योगदान की दिशा में आगे बढ़ाना है।
+              </p>
+              <div class="hero-action-buttons">
+                <a href="#join" class="btn btn-orange nav-trigger" data-view="join">हमारे साथ जुड़ें</a>
+                <a href="#work" class="btn btn-primary nav-trigger" data-view="work">हमारे कार्य देखें</a>
+                <a href="#join" class="btn btn-outline nav-trigger" data-view="join">संपर्क करें</a>
+              </div>
             </div>
-          </button>
-
-          <!-- Dropdown Menu Drawer -->
-          <nav class="menu-dropdown" id="menu-dropdown-panel">
-            <ul class="dropdown-list">
-              <li><a href="index.html" class="dropdown-link active">Home</a></li>
-              <li><a href="about.html" class="dropdown-link">About</a></li>
-              <li><a href="students.html" class="dropdown-link">Students</a></li>
-              <li><a href="institutions.html" class="dropdown-link">Institutions</a></li>
-              <li><a href="industry-connect.html" class="dropdown-link">Industry Connect</a></li>
-              <li><a href="contact.html" class="dropdown-link">Contact</a></li>
-            </ul>
-            <div class="dropdown-divider"></div>
-            <a href="students.html" class="dropdown-cta-btn" id="dropdown-cta-action">Register</a>
-          </nav>
+            
+            <!-- Right Content (Impact Cards) -->
+            <div class="hero-right-content">
+              
+              <!-- Large Navy Card -->
+              <div class="hero-navy-card">
+                <div class="navy-card-badge">✨ हमारा विचार</div>
+                <h2>जिम्मेदार युवा, मजबूत समाज</h2>
+                <p>“जब युवा समाज और राष्ट्रहित के लिए एकजुट होकर आगे बढ़ते हैं, तो बदलाव केवल विचारों में नहीं, धरातल पर दिखाई देता है।”</p>
+              </div>
+              
+              <!-- White Cards Grid -->
+              <div class="hero-white-cards-grid">
+                
+                <!-- Card 1 -->
+                <div class="hero-mini-card">
+                  <div class="mini-card-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <div class="mini-card-info">
+                    <h4>युवा शक्ति</h4>
+                    <p>युवाओं को जिम्मेदारी और नेतृत्व से जोड़ना</p>
+                  </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="hero-mini-card">
+                  <div class="mini-card-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                    </svg>
+                  </div>
+                  <div class="mini-card-info">
+                    <h4>सेवा कार्य</h4>
+                    <p>समाज, जनसेवा और प्राणी सेवा में योगदान</p>
+                  </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="hero-mini-card">
+                  <div class="mini-card-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 19a6.062 6.062 0 0 1-5.705-4H3a2 2 0 0 1-1.737-2.998l2.673-4.63A2 2 0 0 1 5.673 6.368L12 9Z"></path>
+                      <path d="M12 9a6 6 0 0 1 12 0v2a6 6 0 0 1-6 6h-6Z"></path>
+                      <path d="M12 9v8"></path>
+                      <path d="M8 15v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4"></path>
+                    </svg>
+                  </div>
+                  <div class="mini-card-info">
+                    <h4>जनहित आवाज</h4>
+                    <p>अन्याय, भ्रष्टाचार और जनहित मुद्दों पर आवाज उठाना</p>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
         </div>
       </div>
 
-      <!-- 2. Hero Grid - Wide Banner Grid -->
-      <div class="hero-grid-container" id="hero-interactive-grid">
-        <!-- Left Side: Large Image Area -->
-        <div class="hero-left-image-card">
-          <!-- Slide 1 Image -->
-          <div class="hero-image-slide active" data-index="0">
-            <img src="assets/images/hero-student-success.jpg" alt="Student Growth" class="hero-slide-img"></div>
-          <!-- Slide 2 Image -->
-          <div class="hero-image-slide" data-index="1">
-            <img src="assets/images/hero-industry-training.png" alt="Industry Exposure" class="hero-slide-img"> </div>
-          <!-- Slide 3 Image -->
-          <div class="hero-image-slide" data-index="2">
-            <img src="assets/images/hero-learn-earn-bridge.png" alt="Learning to Earning" class="hero-slide-img"> </div>
-        </div>
-
-        <!-- Right Side: Content Area (No white card background, fits naturally) -->
-        <div class="hero-right-content-card">
-          <!-- Content Slide 1 -->
-          <div class="hero-content-slide active" data-index="0">
-            <span class="hero-card-label">Student Growth</span>
-            <h1 class="hero-card-heading">Build Your Career <br>Before Graduation</h1>
-            <p class="hero-card-text">Gain practical exposure, mentorship, and career clarity while you are still studying.</p>
-            <a href="students.html" class="hero-card-cta">Register as Student</a>
-          </div>
-
-          <!-- Content Slide 2 -->
-          <div class="hero-content-slide" data-index="1">
-            <span class="hero-card-label">Industry Exposure</span>
-            <h1 class="hero-card-heading">Learn from Real <br>Industry Experience</h1>
-            <p class="hero-card-text">Understand workplace expectations through hands-on training and industry-guided learning.</p>
-            <a href="industry-connect.html" class="hero-card-cta">Explore Industry Connect</a>
-          </div>
-
-          <!-- Content Slide 3 -->
-          <div class="hero-content-slide" data-index="2">
-            <span class="hero-card-label">Learning to Earning</span>
-            <h1 class="hero-card-heading">Bridge the Gap Between <br>Learning and Earning</h1>
-            <p class="hero-card-text">CORPORA connects students, institutions, and industries to create real career pathways.</p>
-            <a href="contact.html" class="hero-card-cta">Register Now</a>
-          </div>
-
-          <!-- Slider Dots -->
-          <div class="hero-slider-dots">
-            <button class="hero-dot active" data-index="0" aria-label="Go to slide 1"></button>
-            <button class="hero-dot" data-index="1" aria-label="Go to slide 2"></button>
-            <button class="hero-dot" data-index="2" aria-label="Go to slide 3"></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slider JavaScript Controller -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const imageSlides = document.querySelectorAll('.hero-image-slide');
-          const contentSlides = document.querySelectorAll('.hero-content-slide');
-          const dots = document.querySelectorAll('.hero-dot');
-          const gridContainer = document.getElementById('hero-interactive-grid');
-          
-          let currentIndex = 0;
-          let slideTimer = null;
-          const duration = 3000; // Auto-change every 3 seconds
-          const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-          // Toggle Active Classes
-          function goToSlide(index) {
-            imageSlides.forEach((slide, i) => {
-              if (i === index) {
-                slide.classList.add('active');
-              } else {
-                slide.classList.remove('active');
-              }
-            });
-
-            // update height of .hero-left-image-card dynamically to active image's height
-            const activeImg = imageSlides[index].querySelector('img');
-            const card = document.querySelector('.hero-left-image-card');
-            if (activeImg && card) {
-              const updateHeight = () => {
-                const height = activeImg.offsetHeight || activeImg.clientHeight;
-                if (height > 0) {
-                  card.style.height = height + 'px';
-                }
-              };
-              updateHeight();
-              activeImg.addEventListener('load', updateHeight, { once: true });
-              if (activeImg.complete) {
-                updateHeight();
-              }
-            }
-
-            contentSlides.forEach((slide, i) => {
-              if (i === index) {
-                slide.classList.add('active');
-              } else {
-                slide.classList.remove('active');
-              }
-            });
-
-            dots.forEach((dot, i) => {
-              if (i === index) {
-                dot.classList.add('active');
-              } else {
-                dot.classList.remove('active');
-              }
-            });
-
-            currentIndex = index;
-          }
-
-          // Timer Functions
-          function startTimer() {
-            if (isReducedMotion) return;
-            if (!slideTimer) {
-              slideTimer = setInterval(function() {
-                let nextIndex = (currentIndex + 1) % imageSlides.length;
-                goToSlide(nextIndex);
-              }, duration);
-            }
-          }
-
-          function stopTimer() {
-            if (slideTimer) {
-              clearInterval(slideTimer);
-              slideTimer = null;
-            }
-          }
-
-          function resetTimer() {
-            stopTimer();
-            startTimer();
-          }
-
-          // Init Slider
-          goToSlide(0);
-          startTimer();
-
-          // Dots Click Handler
-          dots.forEach((dot, index) => {
-            dot.addEventListener('click', function() {
-              goToSlide(index);
-              resetTimer();
-            });
-          });
-
-          // Pause on Hover
-          if (gridContainer) {
-            gridContainer.addEventListener('mouseenter', stopTimer);
-            gridContainer.addEventListener('mouseleave', startTimer);
-          }
-
-          // Handle window resizing to keep the dynamic height in sync
-          window.addEventListener('resize', () => {
-            const activeImg = imageSlides[currentIndex].querySelector('img');
-            const card = document.querySelector('.hero-left-image-card');
-            if (activeImg && card) {
-              const height = activeImg.offsetHeight || activeImg.clientHeight;
-              if (height > 0) {
-                card.style.height = height + 'px';
-              }
-            }
-          });
-        });
-      </script>
-    </section><!-- 3. First Transition Section (The Gap Card) -->
-    <section id="gap-transition" class="gap-card-section">
-      <div class="container gap-card-container">
-        <div class="gap-card-grid" id="gap-reveal-grid">
-          <!-- Left Column: Category Label -->
-          <div class="gap-card-left">
-            <span class="category-pill" id="gap-category-pill">Student Reality</span>
-          </div>
-          
-          <!-- Right Column: Content -->
-          <div class="gap-card-right">
-            <h2 class="gap-card-statement" id="gap-card-statement-heading">
-              <span class="statement-line">
-                <span class="statement-line-text">Students don’t just need more learning.</span>
-              </span>
-              <span class="statement-line">
-                <span class="statement-line-text">They need direction, confidence, and career readiness.</span>
-              </span>
-            </h2>
+      <!-- Short Intro Section -->
+      <section style="margin-top: 16px;">
+        <div class="container">
+          <div class="form-container" style="max-width: 100%; box-shadow: var(--shadow-md); border-top: 5px solid var(--primary-orange); text-align: center; padding: 40px clamp(20px, 5vw, 48px); margin: 0 auto;">
+            <!-- Heading -->
+            <h3 style="color: var(--primary-blue); font-size: 2rem; margin-bottom: 20px; font-weight: 700;">हम कौन हैं?</h3>
             
-            <p class="gap-card-supporting-text" id="gap-card-supporting-text-block">
-              Many students complete their academic journey but still feel unsure about interviews, workplace expectations, <span class="highlight-pill">practical skills</span>, communication, and career decisions. CORPORA helps them move with <span class="highlight-pill">career clarity</span>, <span class="highlight-pill">industry exposure</span>, and <span class="highlight-pill">placement-focused confidence</span>.
+            <!-- Description -->
+            <div style="max-width: 900px; margin: 0 auto; text-align: left; color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              <p style="margin-bottom: 12px;">
+                युवा मंच संगठन समाज के हित में कार्य करने वाला एक सामाजिक मंच है, जहां युवाओं की ऊर्जा, समाज सेवा की भावना और जनहित की सोच को एक दिशा दी जाती है।
+              </p>
+              <p style="margin-bottom: 12px;">
+                हमारा प्रयास है कि समाज में जागरूकता बढ़े, जरूरतमंद लोगों तक सहायता पहुंचे, छात्रों और अभिभावकों की समस्याओं को आवाज मिले और स्थानीय स्तर पर सामाजिक मुद्दों को जिम्मेदारी से उठाया जाए।
+              </p>
+              <p style="margin-bottom: 0;">
+                युवा मंच संगठन समाज के हर वर्ग के साथ मिलकर कार्य करने में विश्वास रखता है। हमारा उद्देश्य किसी एक व्यक्ति या समूह तक सीमित नहीं है, बल्कि समाज के व्यापक हित के लिए कार्य करना है।
+              </p>
+            </div>
+            
+            <!-- Highlight Chips -->
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; margin-bottom: 16px;">
+              <span style="background: var(--bg-white); border: 1px solid var(--border-soft); box-shadow: var(--shadow-sm); padding: 8px 18px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary-blue); display: inline-flex; align-items: center; gap: 8px;">
+                🛡️ गैर-राजनीतिक संगठन
+              </span>
+              <span style="background: var(--bg-white); border: 1px solid var(--border-soft); box-shadow: var(--shadow-sm); padding: 8px 18px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary-blue); display: inline-flex; align-items: center; gap: 8px;">
+                🤝 समाज सेवा एवं जनहित
+              </span>
+              <span style="background: var(--bg-white); border: 1px solid var(--border-soft); box-shadow: var(--shadow-sm); padding: 8px 18px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary-blue); display: inline-flex; align-items: center; gap: 8px;">
+                ✨ युवा नेतृत्व
+              </span>
+            </div>
+
+            <!-- CTA Button -->
+            <div style="text-align: center; margin-top: 24px;">
+              <a href="#about" class="btn btn-orange nav-trigger" data-view="about" style="padding: 10px 24px; font-size: 0.95rem; font-weight: 600;">हमारे बारे में पढ़ें</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission & Vision Section -->
+      <section>
+        <div class="mv-grid">
+          <div class="mv-card">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-orange);"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              हमारा मिशन
+            </h3>
+            <p>
+              युवा मंच संगठन का मिशन युवाओं को समाज सेवा, जनसेवा, प्राणी सेवा, छात्र हित और जनहित के कार्यों से जोड़कर उन्हें जिम्मेदार नागरिक नेतृत्व की दिशा में आगे बढ़ाना है। संगठन का प्रयास है कि जरूरतमंदों तक सहायता पहुंचे, समाज में जागरूकता बढ़े और जनहित के मुद्दों को सही माध्यम से आवाज मिले।
+            </p>
+          </div>
+          <div class="mv-card vision">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-green);"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              हमारी सोच (Vision)
+            </h3>
+            <p>
+              हमारी सोच है कि युवा शक्ति केवल ऊर्जा नहीं, बल्कि समाज परिवर्तन की सबसे बड़ी ताकत है। जब युवा संवैधानिक जागरूकता, सेवा भावना और जिम्मेदारी के साथ आगे बढ़ते हैं, तो समाज में वास्तविक बदलाव संभव होता है। युवा मंच संगठन युवाओं को सकारात्मक दिशा देकर राष्ट्रहित, समाजहित और मानवता के लिए सक्रिय भूमिका निभाने के लिए प्रेरित करता है।
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 4. CORPORA Solution Section -->
-    <section id="solution" class="solution-section">
-      <div class="container solution-container">
-        <div class="solution-grid" id="solution-reveal-grid">
-          <!-- Left Column: Content Block -->
-          <div class="solution-left">
-            <span class="category-pill" id="solution-category-pill">The CORPORA Approach</span>
-            
-            <h2 class="solution-heading" id="solution-heading-block">
-              <span class="heading-line">
-                <span class="heading-line-text">A Career Readiness System,</span>
-              </span>
-              <span class="heading-line">
-                <span class="heading-line-text">not just a training program.</span>
-              </span>
-            </h2>
-            
-            <p class="solution-text" id="solution-text-block">
-              CORPORA brings together practical training, mentorship, skill assessment, career counselling, interview preparation, and placement-focused support into one clear student journey.
+      <!-- Key Work Areas Section -->
+      <section class="section-bg-light" style="border-radius: var(--radius-lg);">
+        <div class="section-header">
+          <h2>हमारे प्रमुख कार्य</h2>
+          <p>युवा मंच संगठन समाज के विभिन्न क्षेत्रों में कार्य करता है। हमारा उद्देश्य समाधान की दिशा में समाज और युवाओं को जोड़ना है।</p>
+        </div>
+        <div class="work-grid">
+          <div class="work-card">
+            <div class="work-card-icon">🤝</div>
+            <h3>1. समाज सेवा एवं जरूरतमंदों की सहायता</h3>
+            <p>युवा मंच संगठन जरूरतमंद लोगों, गरीब परिवारों और समाज के कमजोर वर्गों तक सहायता पहुंचाने का प्रयास करता है। भोजन, सहयोग और आवश्यक सहायता से जुड़े कार्य संगठन की सेवा भावना को दर्शाते हैं।</p>
+          </div>
+          <div class="work-card">
+            <div class="work-card-icon">🎓</div>
+            <h3>2. छात्र एवं अभिभावक हित</h3>
+            <p>युवा मंच संगठन छात्रों और अभिभावकों से जुड़े मुद्दों को जिम्मेदारी से उठाता है। शिक्षा व्यवस्था, स्कूलों की समस्याएं, फीस, सुविधाएं और छात्र अधिकारों से जुड़े विषयों पर संगठन समाधान की दिशा में प्रयास करता है।</p>
+          </div>
+          <div class="work-card">
+            <div class="work-card-icon">📢</div>
+            <h3>3. जनहित मुद्दों पर आवाज</h3>
+            <p>युवा मंच संगठन बिजली, सड़क, स्वच्छता, स्वास्थ्य, सार्वजनिक सुविधाओं और स्थानीय समस्याओं जैसे जनहित मुद्दों को जिम्मेदारी से उठाता है। संगठन आम लोगों की आवाज को सही मंच तक पहुंचाने का प्रयास करता है।</p>
+          </div>
+          <div class="work-card">
+            <div class="work-card-icon">⚡</div>
+            <h3>4. जागरूकता एवं जनचेतना अभियान</h3>
+            <p>युवा मंच संगठन समाज में जागरूकता बढ़ाने के लिए रैली, जनचेतना अभियान, कैंडल मार्च और सामाजिक संदेश जैसे प्रयास करता है। उद्देश्य लोगों को अधिकार, कर्तव्य और नागरिक जिम्मेदारी के प्रति जागरूक करना है।</p>
+          </div>
+          <div class="work-card">
+            <div class="work-card-icon">🌱</div>
+            <h3>5. पर्यावरण एवं स्वच्छता अभियान</h3>
+            <p>युवा मंच संगठन पर्यावरण संरक्षण, वृक्षारोपण, स्वच्छता और साफ-सुथरे समाज की भावना को बढ़ावा देता है। संगठन लोगों को स्वच्छ, सुरक्षित और जिम्मेदार वातावरण के प्रति जागरूक करता है।</p>
+          </div>
+          <div class="work-card">
+            <div class="work-card-icon">❤️</div>
+            <h3>6. रोजगार एवं युवा मार्गदर्शन</h3>
+            <p>युवा मंच संगठन युवाओं को सही दिशा, मार्गदर्शन और अवसरों से जोड़ने का प्रयास करता है। रोजगार, करियर मार्गदर्शन और युवा विकास से जुड़ी पहल संगठन के कार्यों का महत्वपूर्ण हिस्सा हैं।</p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="#work" class="btn btn-primary nav-trigger" data-view="work">विस्तृत कार्य विवरण देखें</a>
+        </div>
+      </section>
+
+      <!-- Why We Exist Section -->
+      <section>
+        <div class="why-grid">
+          <div class="why-text">
+            <h3>युवा मंच संगठन की जरूरत क्यों?</h3>
+            <p>
+              आज समाज में कई ऐसे मुद्दे हैं जिन्हें सही मंच, सही आवाज और जिम्मेदार प्रयासों की जरूरत है। कई बार आम लोगों की समस्याएं अनसुनी रह जाती हैं। कई जरूरतमंद लोग सहायता के अभाव में परेशान रहते हैं। कई युवा समाज के लिए कुछ करना चाहते हैं, लेकिन उन्हें सही दिशा नहीं मिलती।
             </p>
-            
-            <p class="solution-highlight" id="solution-highlight-block">
-              From classroom learning to workplace confidence.
+            <p>
+              युवा मंच संगठन इसी उद्देश्य से कार्य करता है कि समाज, युवा और जनहित को एक मजबूत मंच मिले।
             </p>
-            
-            <a href="#journey" class="text-cta" id="solution-cta-btn">
-              <span>Explore the student journey</span>
-              <span class="cta-arrow">→</span>
+          </div>
+          <div class="why-list">
+            <div class="why-item">
+              <span class="why-item-icon">✓</span>
+              <span class="why-item-text">युवाओं को समाज सेवा से जोड़ना</span>
+            </div>
+            <div class="why-item">
+              <span class="why-item-icon">✓</span>
+              <span class="why-item-text">जरूरतमंदों तक सहायता पहुंचाना</span>
+            </div>
+            <div class="why-item">
+              <span class="why-item-icon">✓</span>
+              <span class="why-item-text">जनहित मुद्दों को आवाज देना</span>
+            </div>
+            <div class="why-item">
+              <span class="why-item-icon">✓</span>
+              <span class="why-item-text">स्थानीय समस्याओं को जिम्मेदारी से उठाना</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Founder Message Section -->
+      <section class="section-bg-light" style="border-radius: var(--radius-lg);">
+        <div class="founder-preview-card">
+          <div class="founder-preview-grid">
+            <div class="founder-img-wrapper">
+              <img src="assetsimages/founder-dhruv-dev-gupta.jpg.png" alt="ध्रुव देव गुप्ता - संस्थापक" class="founder-img">
+              <div class="founder-name">ध्रुव देव गुप्ता</div>
+              <div class="founder-title">संस्थापक, युवा मंच संगठन</div>
+            </div>
+            <div>
+              <h3>संस्थापक का संदेश</h3>
+              <p class="founder-quote">
+                "युवा मंच संगठन की शुरुआत समाज सेवा, जनहित और युवा शक्ति को एक मंच देने के उद्देश्य से की गई। हमारा विश्वास है कि समाज में बदलाव केवल शिकायतों से नहीं, बल्कि जिम्मेदार प्रयासों से आता है। हम चाहते हैं कि युवा अपने समाज, अपने शहर और अपने देश के लिए आगे आएं।"
+              </p>
+              <a href="#founder" class="btn btn-outline nav-trigger" data-view="founder">पूरा संदेश पढ़ें</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- YouTube Video Section -->
+      <section class="section-bg-light" style="border-radius: var(--radius-lg); margin-top: 16px;">
+        <div class="section-header">
+          <h2>हमारा कार्य वीडियो में</h2>
+          <p>युवा मंच संगठन द्वारा जनहित, सामाजिक जागरूकता और सम्मान से जुड़े महत्वपूर्ण कार्यों की झलक।</p>
+        </div>
+        <div class="work-grid" style="margin-bottom: 20px;">
+          <!-- Video Card 1 -->
+          <div class="work-card video-card">
+            <a class="video-container" href="https://youtu.be/8TwajVSR_XM" target="_blank" rel="noopener noreferrer">
+              <img class="video-thumbnail" src="https://img.youtube.com/vi/8TwajVSR_XM/hqdefault.jpg" alt="भ्रष्टाचार के खिलाफ उठाई आवाज">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="6 2 18 12 6 22 6 2"></polygon></svg>
+              </div>
             </a>
-          </div>
-          
-          <!-- Right Column: Premium Image Block -->
-          <div class="solution-right">
-            <!-- Subtle abstract academia-to-industry path in background of image -->
-            <svg class="solution-bg-path-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 50,320 C 120,300 240,360 300,220 C 350,140 320,80 260,100" fill="none" stroke="rgba(37, 99, 235, 0.12)" stroke-width="1.5" stroke-dasharray="4 4"/>
-            </svg>
-            
-            <div class="solution-image-wrapper">
-              <img src="assets/images/student-mentorship-discussion-01.jpg.jpg" alt="Student mentorship and career guidance discussion" class="solution-img" id="solution-img-block">
-              <div class="solution-image-overlay"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. Program Highlights Section -->
-    <section id="highlights" class="highlights-section">
-      <div class="container highlights-container">
-        <div class="highlights-grid" id="highlights-reveal-grid">
-          
-          <!-- Header (Area: header) -->
-          <div class="highlights-header" id="highlights-header-block">
-            <span class="category-pill" id="highlights-category-pill">Program Highlights</span>
-            <h2 class="highlights-heading" id="highlights-main-heading">
-              <span class="heading-line">
-                <span class="heading-line-text">Everything students need</span>
-              </span>
-              <span class="heading-line">
-                <span class="heading-line-text">to become career-ready.</span>
-              </span>
-            </h2>
-            <p class="highlights-subtext" id="highlights-subtext-block">
-              CORPORA combines practical training, mentorship, skill assessment, counselling, interview preparation, and placement-focused support to help students build confidence before entering the professional world.
-            </p>
-          </div>
-          
-          <!-- Image (Area: image) -->
-          <div class="highlights-image-wrapper" id="highlights-image-block">
-            <div class="highlights-image-inner">
-              <img src="assets/images/practical-training-session.jpg.jpg" alt="Students in practical career training session" class="highlights-img" id="highlights-img-tag">
-              <div class="highlights-image-overlay"></div>
-            </div>
-          </div>
-          
-          <!-- Rows (Area: rows) -->
-          <div class="highlights-rows-container" id="highlights-rows-block">
-            <!-- Row 1 -->
-            <div class="highlight-row">
-              <div class="row-num">01</div>
-              <div class="row-num-divider"></div>
-              <div class="row-content">
-                <h3 class="row-title">Practical Training</h3>
-                <p class="row-desc">Hands-on learning designed to build real workplace skills.</p>
-              </div>
-            </div>
-            <!-- Row 2 -->
-            <div class="highlight-row">
-              <div class="row-num">02</div>
-              <div class="row-num-divider"></div>
-              <div class="row-content">
-                <h3 class="row-title">Skill Assessment</h3>
-                <p class="row-desc">Understand student strengths, gaps, and readiness level.</p>
-              </div>
-            </div>
-            <!-- Row 3 -->
-            <div class="highlight-row">
-              <div class="row-num">03</div>
-              <div class="row-num-divider"></div>
-              <div class="row-content">
-                <h3 class="row-title">Career Counselling</h3>
-                <p class="row-desc">Help students choose the right career direction with clarity.</p>
-              </div>
-            </div>
-            <!-- Row 4 -->
-            <div class="highlight-row">
-              <div class="row-num">04</div>
-              <div class="row-num-divider"></div>
-              <div class="row-content">
-                <h3 class="row-title">Interview & Placement Readiness</h3>
-                <p class="row-desc">Prepare students for interviews, communication, and placement opportunities.</p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Student Journey Section -->
-    <section id="journey" class="journey-section">
-      <div class="container journey-container">
-        
-        <!-- Header -->
-        <div class="journey-header" id="journey-header-block">
-          <span class="category-pill" id="journey-category-pill">Student Journey</span>
-          <h2 class="journey-heading" id="journey-main-heading">
-            <span class="heading-line">
-              <span class="heading-line-text">A clear path from learning</span>
-            </span>
-            <span class="heading-line">
-              <span class="heading-line-text">to career readiness.</span>
-            </span>
-          </h2>
-          <p class="journey-subtext" id="journey-subtext-block">
-            CORPORA guides students step by step through counselling, assessment, practical training, mentorship, interview preparation, and placement-focused support.
-          </p>
-        </div>
-        
-        <!-- Pathway timeline container -->
-        <div class="journey-pathway-wrapper" id="journey-pathway-block">
-          <!-- The horizontal line drawn via CSS -->
-          <div class="journey-line"></div>
-          
-          <div class="journey-steps-grid">
-            <!-- Step 1 -->
-            <div class="journey-step-item">
-              <div class="step-marker-dot"></div>
-              <div class="step-num">01</div>
-              <h3 class="step-title">Discover</h3>
-              <p class="step-desc">Understand career interests, goals, and current readiness.</p>
-            </div>
-            
-            <!-- Step 2 -->
-            <div class="journey-step-item">
-              <div class="step-marker-dot"></div>
-              <div class="step-num">02</div>
-              <h3 class="step-title">Assess</h3>
-              <p class="step-desc">Identify strengths, skill gaps, and development areas.</p>
-            </div>
-            
-            <!-- Step 3 -->
-            <div class="journey-step-item">
-              <div class="step-marker-dot"></div>
-              <div class="step-num">03</div>
-              <h3 class="step-title">Train</h3>
-              <p class="step-desc">Build practical skills through structured learning and real-world exposure.</p>
-            </div>
-            
-            <!-- Step 4 -->
-            <div class="journey-step-item">
-              <div class="step-marker-dot"></div>
-              <div class="step-num">04</div>
-              <h3 class="step-title">Prepare</h3>
-              <p class="step-desc">Improve communication, resume, interview confidence, and workplace readiness.</p>
-            </div>
-            
-            <!-- Step 5 -->
-            <div class="journey-step-item">
-              <div class="step-marker-dot"></div>
-              <div class="step-num">05</div>
-              <h3 class="step-title">Connect</h3>
-              <p class="step-desc">Support students with industry-aligned opportunities and placement preparation.</p>
-            </div>
-            
-            <!-- Step 6 -->
-            <div class="journey-step-item">
-              <div class="step-marker-dot"></div>
-              <div class="step-num">06</div>
-              <h3 class="step-title">Grow</h3>
-              <p class="step-desc">Help students move forward with confidence, clarity, and direction.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Supporting visual below the path -->
-        <div class="journey-image-wrapper" id="journey-image-block">
-          <div class="journey-image-inner">
-            <img src="assets/images/student-career-counselling.jpg.jpg" alt="Student career counselling and readiness pathway guidance" class="journey-img" id="journey-img-tag">
-            <div class="journey-image-overlay"></div>
-          </div>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- 7. Trust & Real-World Exposure Section -->
-    <section id="exposure" class="exposure-section">
-      <div class="container exposure-container">
-        
-        <!-- Header -->
-        <div class="exposure-header" id="exposure-header-block">
-          <span class="category-pill" id="exposure-category-pill">Real-World Exposure</span>
-          <h2 class="exposure-heading" id="exposure-main-heading">
-            <span class="heading-line">
-              <span class="heading-line-text">Learning becomes stronger when</span>
-            </span>
-            <span class="heading-line">
-              <span class="heading-line-text">students understand the world of work.</span>
-            </span>
-          </h2>
-          <p class="exposure-subtext" id="exposure-subtext-block">
-            CORPORA helps students connect academic knowledge with practical industry expectations through exposure, guided training, workplace awareness, and placement-focused preparation.
-          </p>
-        </div>
-        
-        <!-- Modern Asymmetric Image Grid -->
-        <div class="exposure-grid" id="exposure-reveal-grid">
-          <!-- Left side: Large Feature Image Card -->
-          <a href="about.html#hands-on-learning" class="exposure-feature-card" id="exposure-feature-card-block" aria-label="Learn more about hands-on learning">
-            <div class="image-zoom-container">
-              <img src="assets/images/industry-hands-on-learning-01.jpg" alt="Hands-on industry training session" class="grid-img">
-              <div class="grid-img-overlay"></div>
-            </div>
-            <p class="grid-caption">01 / Hands-on learning</p>
-          </a>
-          
-          <!-- Right side: Three smaller horizontal cards -->
-          <div class="exposure-supporting-container" id="exposure-supporting-block">
-            <!-- Supporting card 1 -->
-            <a href="about.html#technical-skill-exposure" class="exposure-supporting-card" aria-label="Learn more about technical skill exposure">
-              <div class="image-zoom-container">
-                <img src="assets/images/industry-technical-skill-exposure-01.jpg" alt="Technical skill exposure session" class="grid-img">
-                <div class="grid-img-overlay"></div>
-              </div>
-              <p class="grid-caption">02 / Technical skill exposure</p>
-            </a>
-            
-            <!-- Supporting card 2 -->
-            <a href="about.html#workplace-safety-awareness" class="exposure-supporting-card" aria-label="Learn more about workplace safety awareness">
-              <div class="image-zoom-container">
-                <img src="assets/images/industry-workplace-safety-awareness-01.jpg" alt="Workplace safety awareness briefing" class="grid-img">
-                <div class="grid-img-overlay"></div>
-              </div>
-              <p class="grid-caption">03 / Workplace safety awareness</p>
-            </a>
-            
-            <!-- Supporting card 3 -->
-            <a href="about.html#team-production-understanding" class="exposure-supporting-card" aria-label="Learn more about team and production understanding">
-              <div class="image-zoom-container">
-                <img src="assets/images/industry-team-production-understanding-01.jpg" alt="Team and production understanding review" class="grid-img">
-                <div class="grid-img-overlay"></div>
-              </div>
-              <p class="grid-caption">04 / Team and production understanding</p>
-            </a>
-          </div>
-        </div>
-        
-        <!-- Optional Short Statement Below -->
-        <div class="exposure-statement-wrapper" id="exposure-statement-block">
-          <p class="exposure-statement-text">
-            Students don’t just prepare for exams — they prepare to enter real professional environments with clarity and confidence.
-          </p>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- 7.5 Leadership & Legacy Section -->
-    <section id="leadership" class="home-founder-section">
-      <div class="container home-founder-container">
-        <div class="home-founder-grid" id="home-founder-reveal">
-          <!-- Left side: text + CTA -->
-          <div class="home-founder-content-col">
-            <span class="category-pill">Leadership & Legacy</span>
-            <h2 class="home-founder-heading">
-              Built on a foundation of experience, discipline, and industry insight.
-            </h2>
-            <p class="home-founder-text">
-              CORPORA is guided by the vision of Col. Dr. B. D. Gupta — bringing together academic understanding, industrial leadership, HR expertise, and a long-standing commitment to preparing talent for real opportunities.
-            </p>
-            
-            <!-- 3 trust points -->
-            <ul class="home-founder-trust-points">
-              <li>
-                <span class="trust-point-icon">✓</span>
-                <span class="trust-point-text">IIT Kanpur background</span>
-              </li>
-              <li>
-                <span class="trust-point-icon">✓</span>
-                <span class="trust-point-text">Defence and HR leadership</span>
-              </li>
-              <li>
-                <span class="trust-point-icon">✓</span>
-                <span class="trust-point-text">Bhakti legacy since 1998</span>
-              </li>
-            </ul>
-            
-            <div class="home-founder-cta-wrapper">
-              <a href="about.html#founder" class="text-cta">
-                <span>Meet the Founder</span>
-                <span class="cta-arrow">→</span>
+            <div class="video-card-body">
+              <h3>भ्रष्टाचार के खिलाफ उठाई आवाज</h3>
+              <p>युवा मंच संगठन ने जनहित से जुड़े मुद्दों पर भ्रष्टाचार के खिलाफ आवाज उठाकर समाज में जागरूकता और जिम्मेदारी का संदेश दिया।</p>
+              <a href="https://youtu.be/8TwajVSR_XM" target="_blank" rel="noopener noreferrer" class="btn btn-orange video-watch-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                YouTube पर देखें
               </a>
             </div>
           </div>
-          
-          <!-- Right side: image wrapper -->
-          <div class="home-founder-image-col">
-            <div class="founder-image-wrap">
-              <img src="assets/images/founder.jpg" alt="Col. Dr. B. D. Gupta" class="founder-image">
-              <div class="home-founder-image-glow"></div>
+
+          <!-- Video Card 2 -->
+          <div class="work-card video-card">
+            <a class="video-container" href="https://youtu.be/29AuO_vqMaw" target="_blank" rel="noopener noreferrer">
+              <img class="video-thumbnail" src="https://img.youtube.com/vi/29AuO_vqMaw/hqdefault.jpg" alt="शिक्षा और स्वदेशी जागरूकता अभियान">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="6 2 18 12 6 22 6 2"></polygon></svg>
+              </div>
+            </a>
+            <div class="video-card-body">
+              <h3>शिक्षा और स्वदेशी जागरूकता अभियान</h3>
+              <p>युवा मंच संगठन द्वारा ट्यूशन खोर दलाल टीचरों एवं शिक्षा के व्यवसायीकरण के खिलाफ बड़े पैमाने पर छात्र चेतना अभियान चलाया गया।</p>
+              <a href="https://youtu.be/29AuO_vqMaw" target="_blank" rel="noopener noreferrer" class="btn btn-orange video-watch-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                YouTube पर देखें
+              </a>
+            </div>
+          </div>
+
+          <!-- Video Card 3 -->
+          <div class="work-card video-card">
+            <a class="video-container" href="https://youtu.be/BFgtAKkajec" target="_blank" rel="noopener noreferrer">
+              <img class="video-thumbnail" src="https://img.youtube.com/vi/BFgtAKkajec/hqdefault.jpg" alt="ध्रुव देव गुप्ता को भामाशाह रतन 2026 सम्मान">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="6 2 18 12 6 22 6 2"></polygon></svg>
+              </div>
+            </a>
+            <div class="video-card-body">
+              <h3>ध्रुव देव गुप्ता को भामाशाह रतन 2026 सम्मान</h3>
+              <p>भगवा सेना के संस्थापक राष्ट्रीय अध्यक्ष ध्रुव देव गुप्ता को भामाशाह रतन 2026 सम्मान से सम्मानित किया गया।</p>
+              <a href="https://youtu.be/BFgtAKkajec" target="_blank" rel="noopener noreferrer" class="btn btn-orange video-watch-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                YouTube पर देखें
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 8. Institutions & Industry Partners Section -->
-    <section id="institutions" class="partners-section">
-      <!-- Relative anchor target for Industry navigation dropdown -->
-      <div id="industry" class="section-anchor"></div>
-      
-      <div class="container partners-container" id="partners-reveal-grid">
-        <!-- Section Header -->
-        <div class="loop-header">
-          <span class="category-pill" id="partners-category-pill">For Institutions & Industry</span>
-          <h2 class="partners-heading" id="partners-main-heading">
-            Where campus learning connects with real industry experience.
-          </h2>
-          <p class="partners-subtext" id="partners-subtext-block">
-            CORPORA helps students continue their academic education while gaining practical exposure, workplace understanding, and career-focused preparation. By connecting institutions with real industry environments, the program turns classroom learning into hands-on readiness.
+      <!-- Activities Preview Section -->
+      <section>
+        <div class="section-header">
+          <h2>हमारी गतिविधियां</h2>
+          <p>युवा मंच संगठन समय-समय पर समाज सेवा, जागरूकता, छात्र हित, जनहित और जरूरतमंदों की सहायता से जुड़े कार्य करता है।</p>
+        </div>
+        <div style="max-width: 600px; margin: 0 auto; background: var(--bg-light); padding: 30px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+          <ul class="why-list" style="margin-bottom: 24px;">
+            <li class="why-item" style="border-left-color: var(--primary-orange);"><span class="why-item-icon" style="color: var(--primary-orange);">•</span> सामाजिक जागरूकता कार्यक्रम</li>
+            <li class="why-item" style="border-left-color: var(--primary-orange);"><span class="why-item-icon" style="color: var(--primary-orange);">•</span> जरूरतमंदों की सहायता</li>
+            <li class="why-item" style="border-left-color: var(--primary-orange);"><span class="why-item-icon" style="color: var(--primary-orange);">•</span> छात्र एवं अभिभावक हित से जुड़े मुद्दे</li>
+            <li class="why-item" style="border-left-color: var(--primary-orange);"><span class="why-item-icon" style="color: var(--primary-orange);">•</span> जनहित विषयों पर आवाज</li>
+          </ul>
+          <div style="text-align: center;">
+            <a href="#media-coverage" class="btn btn-primary nav-trigger" data-view="media-coverage">मीडिया कवरेज देखें</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join Us Call to Action -->
+      <div class="cta-banner">
+        <h2>आप भी जुड़ें युवा मंच संगठन से</h2>
+        <div style="margin-bottom: 20px; font-weight: 600; letter-spacing: 0.5px; font-size: 1.05rem; color: var(--primary-orange);">
+          प्रदेश अध्यक्ष • जिला अध्यक्ष • उपाध्यक्ष • सदस्य
+        </div>
+        <p>
+          युवा मंच संगठन प्रत्येक प्रदेश और जिले में सक्रिय युवाओं को संगठनात्मक जिम्मेदारी देने जा रहा है। समाज सेवा, युवा जागरूकता और जनहित कार्यों में नेतृत्व करने के इच्छुक युवा आज ही संगठन के साथ जुड़ें।
+        </p>
+        <div style="margin-bottom: 28px;">
+          <span style="background-color: rgba(255, 255, 255, 0.1); color: var(--bg-white); border: 1px solid rgba(255, 255, 255, 0.15); padding: 6px 16px; border-radius: 50px; font-size: 0.9rem; font-weight: 500; display: inline-block; letter-spacing: 0.3px;">
+            ✨ निःशुल्क जॉइनिंग
+          </span>
+        </div>
+        <div class="cta-banner-buttons">
+          <a href="#join" class="btn btn-orange nav-trigger" data-view="join">आज ही संगठन के साथ जुड़ें</a>
+        </div>
+      </div>
+
+      <!-- Closing CTA -->
+      <section style="text-align: center; padding: 40px 0;">
+        <h3 style="color: var(--primary-blue); font-size: 1.6rem; margin-bottom: 12px;">समाज के लिए एक कदम, बदलाव की ओर एक शुरुआत</h3>
+        <p style="color: var(--text-muted); max-width: 800px; margin: 0 auto 20px auto;">
+          युवा मंच संगठन के साथ जुड़कर आप समाज सेवा, जागरूकता और जनहित के कार्यों में अपना योगदान दे सकते हैं। आज ही हमारे साथ जुड़ें और समाज में सकारात्मक बदलाव का हिस्सा बनें।
+        </p>
+      </section>
+    </div>
+
+
+    <!-- ==========================================
+         VIEW 2: ABOUT US PAGE
+         ========================================== -->
+    <div id="about" class="view-section">
+      <div class="section-header">
+        <h2>हमारे बारे में</h2>
+        <p>युवा मंच संगठन का परिचय और संगठन की पृष्ठभूमि</p>
+      </div>
+
+      <div class="form-container" style="max-width: 1000px; box-shadow: var(--shadow-lg); margin-bottom: 40px; border-top: 5px solid var(--primary-orange); padding: 40px;">
+        <h3 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">युवा मंच संगठन का परिचय</h3>
+        <p style="margin-bottom: 20px; font-size: 1.05rem;">
+          युवा मंच संगठन एक पूर्ण रूप से गैर-राजनीतिक सामाजिक संगठन है, जो समाज सेवा, जनसेवा, प्राणी सेवा, युवा जागरूकता, छात्र हित और जनहित से जुड़े कार्यों को जिम्मेदारी के साथ आगे बढ़ाता है।
+        </p>
+        <p style="margin-bottom: 20px;">
+          संगठन किसी भी राजनीतिक दल या पार्टी से संबंधित नहीं है। युवा मंच संगठन जाति, धर्म और मजहब के भेदभाव से ऊपर उठकर इंसानियत, मानवता, राष्ट्रहित, समाजहित और जनहित की भावना के साथ कार्य करता है।
+        </p>
+        <p style="margin-bottom: 20px;">
+          हमारा प्रयास है कि युवाओं को समाज के प्रति जिम्मेदार बनाकर सेवा भावना, संवैधानिक जागरूकता और सकारात्मक सामाजिक कार्यों से जोड़ा जाए, ताकि समाज में जागरूक और सक्रिय युवा नेतृत्व तैयार हो सके।
+        </p>
+      </div>
+
+      <div class="intro-grid" style="margin-bottom: 40px;">
+        <div class="intro-stats-card" style="border-left-color: var(--primary-orange);">
+          <h4 style="color: var(--primary-orange);">हमारी शुरुआत</h4>
+          <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px;">
+            युवा मंच संगठन की शुरुआत समाज सेवा की भावना और युवाओं को एक सकारात्मक मंच देने के उद्देश्य से हुई। संगठन का विचार इस सोच से जुड़ा है कि जब युवा सही दिशा में संगठित होते हैं, तो वे समाज में बड़ा बदलाव ला सकते हैं।
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.7;">
+            शुरुआत से ही संगठन ने स्थानीय स्तर पर सामाजिक मुद्दों, जरूरतमंदों की सहायता, छात्र हित और जनहित से जुड़े कार्यों पर ध्यान दिया। समय के साथ संगठन का कार्यक्षेत्र बढ़ता गया और अधिक युवा इस सामाजिक पहल से जुड़ते गए।
           </p>
         </div>
 
-        <!-- Campus-to-Industry Learning Loop Grid -->
-        <div class="loop-visual-flow">
+        <div class="intro-stats-card" style="border-left-color: var(--primary-green);">
+          <h4 style="color: var(--primary-green);">हमारी पहचान</h4>
+          <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px;">
+            युवा मंच संगठन की पहचान युवाओं की भागीदारी, सेवा भावना और जनहित के प्रति सक्रियता से है। संगठन समाज के बीच एक जिम्मेदार और भरोसेमंद मंच के रूप में कार्य करने का प्रयास करता है।
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.7;">
+            हमारी पहचान केवल विचारों या शब्दों से नहीं, बल्कि धरातल पर किए गए कार्यों से बनती है। जरूरतमंदों की सहायता, छात्र हित, जनहित मुद्दों पर आवाज और सामाजिक जागरूकता हमारे कार्यों की मुख्य पहचान है।
+          </p>
+        </div>
+      </div>
+
+      <!-- Our Purpose & Our Workstyle -->
+      <div class="mv-grid" style="margin-bottom: 40px;">
+        <div class="mv-card">
+          <h3 style="color: var(--primary-blue);">हमारा उद्देश्य</h3>
+          <p style="font-weight: 500; margin-bottom: 12px; font-size: 1.05rem;">
+            युवा मंच संगठन का उद्देश्य युवाओं को समाज सेवा, जनसेवा, प्राणी सेवा, छात्र हित, जनहित और जागरूकता से जुड़े कार्यों में जिम्मेदारी के साथ जोड़ना है।
+          </p>
+          <p style="margin-bottom: 12px; font-size: 0.95rem; line-height: 1.7;">
+            संगठन युवाओं को संवैधानिक जागरूकता, सेवा भावना और सामाजिक नेतृत्व की दिशा में प्रेरित करता है, ताकि वे समाज में सकारात्मक बदलाव के लिए सक्रिय भूमिका निभा सकें।
+          </p>
+          <p style="font-weight: 600; margin-bottom: 12px; font-size: 0.95rem;">
+            हमारे प्रमुख उद्देश्य हैं:
+          </p>
+          <ul class="why-list" style="gap: 8px; font-size: 0.95rem;">
+            <li>• समाज सेवा और जनसेवा को बढ़ावा देना</li>
+            <li>• युवाओं को जिम्मेदार नेतृत्व से जोड़ना</li>
+            <li>• जरूरतमंद लोगों की सहायता करना</li>
+            <li>• छात्र एवं अभिभावक हित के मुद्दों पर कार्य करना</li>
+            <li>• जनहित मुद्दों पर जिम्मेदार आवाज उठाना</li>
+            <li>• सामाजिक जागरूकता और नागरिक जिम्मेदारी को बढ़ावा देना</li>
+          </ul>
+        </div>
+
+        <div class="mv-card vision">
+          <h3 style="color: var(--primary-green);">हमारी कार्यशैली</h3>
+          <p style="font-weight: 500; margin-bottom: 12px; font-size: 1.05rem;">
+            युवा मंच संगठन जिम्मेदारी, पारदर्शिता और सेवा भावना के साथ कार्य करता है। संगठन किसी भी सामाजिक या जनहित मुद्दे को समझकर उसे सही माध्यम से आगे बढ़ाने का प्रयास करता है।
+          </p>
+          <p style="font-weight: 600; margin-bottom: 12px; font-size: 0.95rem;">
+            हमारी कार्यशैली में शामिल हैं:
+          </p>
+          <ul class="why-list" style="gap: 8px; font-size: 0.95rem;">
+            <li>• समस्या या जरूरत की पहचान करना</li>
+            <li>• युवाओं और समाज को साथ जोड़ना</li>
+            <li>• जरूरतमंद व्यक्ति या मुद्दे तक पहुंचना</li>
+            <li>• उचित माध्यम से सहायता या आवाज पहुंचाना</li>
+            <li>• जागरूकता फैलाना</li>
+            <li>• लगातार follow-up करना</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ==========================================
+         VIEW 3: OUR WORK PAGE
+         ========================================== -->
+    <div id="work" class="view-section">
+      <div class="section-header">
+        <h2>हमारे कार्य</h2>
+        <p>युवा मंच संगठन विभिन्न सामाजिक क्षेत्रों में सक्रिय भूमिका निभाता है।</p>
+      </div>
+
+      <div class="work-grid" style="grid-template-columns: 1fr; gap: 30px;">
+
+        <!-- 1. समाज सेवा -->
+        <div class="work-card" style="border-left: 5px solid var(--primary-blue);">
+          <div class="work-card-icon">🤝</div>
+          <h3>1. समाज सेवा एवं जरूरतमंदों की सहायता</h3>
+          <p>
+            युवा मंच संगठन समाज सेवा को अपनी प्रमुख जिम्मेदारी मानता है। संगठन जरूरतमंद लोगों, गरीब परिवारों, असहाय व्यक्तियों और समाज के कमजोर वर्गों तक सहायता पहुंचाने का प्रयास करता है। समय-समय पर भोजन, सहयोग, मार्गदर्शन और आवश्यक सहायता से जुड़े कार्यों के माध्यम से संगठन सेवा भावना को आगे बढ़ाता है।
+          </p>
+          <div class="work-card-list">
+            <ul style="margin-top: 10px;">
+              <li>जरूरतमंद लोगों तक सहायता पहुंचाना</li>
+              <li>गरीब और असहाय परिवारों का सहयोग</li>
+              <li>भोजन और आवश्यक सहायता से जुड़े कार्य</li>
+              <li>समाज में सेवा और सहयोग की भावना बढ़ाना</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2. छात्र एवं अभिभावक हित -->
+        <div class="work-card" style="border-left: 5px solid var(--primary-orange);">
+          <div class="work-card-icon">🎓</div>
+          <h3>2. छात्र एवं अभिभावक हित</h3>
+          <p>
+            युवा मंच संगठन छात्रों और अभिभावकों के हित से जुड़े मुद्दों को गंभीरता और जिम्मेदारी के साथ उठाता है। संगठन शिक्षा व्यवस्था, स्कूलों की समस्याओं, फीस, बुनियादी सुविधाओं, छात्र अधिकारों और मार्गदर्शन से जुड़े विषयों पर आवाज उठाकर समाधान की दिशा में प्रयास करता है।
+          </p>
+          <div class="work-card-list">
+            <ul style="margin-top: 10px;">
+              <li>छात्रों और अभिभावकों की समस्याओं को उठाना</li>
+              <li>स्कूलों की फीस और सुविधाओं से जुड़े मुद्दों पर आवाज</li>
+              <li>शिक्षा व्यवस्था में सुधार की मांग</li>
+              <li>छात्र अधिकार और मार्गदर्शन से जुड़े प्रयास</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. जागरूकता एवं जनचेतना अभियान -->
+        <div class="work-card" style="border-left: 5px solid var(--primary-green);">
+          <div class="work-card-icon">⚡</div>
+          <h3>3. जागरूकता एवं जनचेतना अभियान</h3>
+          <p>
+            युवा मंच संगठन समाज में जागरूकता और जनचेतना बढ़ाने के लिए विभिन्न अभियान चलाता है। संगठन रैली, कैंडल मार्च, सामाजिक संदेश, जनजागरूकता कार्यक्रम और नागरिक जिम्मेदारी से जुड़े विषयों के माध्यम से लोगों को अधिकारों, कर्तव्यों और समाजहित के प्रति जागरूक करने का प्रयास करता है।
+          </p>
+          <div class="work-card-list">
+            <ul style="margin-top: 10px;">
+              <li>सामाजिक जागरूकता अभियान चलाना</li>
+              <li>रैली, कैंडल मार्च और जनचेतना कार्यक्रम</li>
+              <li>अधिकारों और कर्तव्यों के प्रति जागरूकता</li>
+              <li>समाजहित और राष्ट्रहित से जुड़े संदेश फैलाना</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. जनहित मुद्दे -->
+        <div class="work-card" style="border-left: 5px solid var(--primary-blue);">
+          <div class="work-card-icon">📢</div>
+          <h3>4. जनहित मुद्दों पर आवाज</h3>
+          <p>
+            युवा मंच संगठन स्थानीय और सामाजिक स्तर पर जुड़े जनहित मुद्दों को जिम्मेदारी के साथ उठाने का कार्य करता है। बिजली कटौती, सड़क, स्वच्छता, स्वास्थ्य सेवाएं, सार्वजनिक सुविधाएं, प्रशासनिक समस्याएं और आम नागरिकों से जुड़े विषयों को सही माध्यम से आगे पहुंचाना संगठन के प्रमुख कार्यों में शामिल है।
+          </p>
+          <div class="work-card-list">
+            <ul style="margin-top: 10px;">
+              <li>बिजली, सड़क और स्वच्छता से जुड़े मुद्दों पर आवाज</li>
+              <li>स्वास्थ्य और सार्वजनिक सुविधाओं से जुड़ी समस्याओं को उठाना</li>
+              <li>स्थानीय स्तर की समस्याओं को प्रशासन तक पहुंचाना</li>
+              <li>आम लोगों की आवाज को सही मंच देना</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. पर्यावरण एवं स्वच्छता अभियान -->
+        <div class="work-card" style="border-left: 5px solid var(--primary-orange);">
+          <div class="work-card-icon">🌱</div>
+          <h3>5. पर्यावरण एवं स्वच्छता अभियान</h3>
+          <p>
+            युवा मंच संगठन पर्यावरण संरक्षण और स्वच्छता को समाज की महत्वपूर्ण जिम्मेदारी मानता है। संगठन वृक्षारोपण, स्वच्छता अभियान, गंदगी मुक्त वातावरण और सार्वजनिक स्थानों की साफ-सफाई से जुड़े मुद्दों पर जागरूकता फैलाने का प्रयास करता है, ताकि समाज में स्वच्छ और सुरक्षित वातावरण की भावना मजबूत हो।
+          </p>
+          <div class="work-card-list">
+            <ul style="margin-top: 10px;">
+              <li>वृक्षारोपण और पर्यावरण संरक्षण को बढ़ावा देना</li>
+              <li>स्वच्छता और साफ-सुथरे वातावरण के लिए जागरूकता</li>
+              <li>सार्वजनिक स्थानों की स्वच्छता से जुड़े मुद्दे उठाना</li>
+              <li>समाज को पर्यावरण के प्रति जिम्मेदार बनाना</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6. रोजगार एवं युवा मार्गदर्शन -->
+        <div class="work-card" style="border-left: 5px solid var(--primary-green);">
+          <div class="work-card-icon">❤️</div>
+          <h3>6. रोजगार एवं युवा मार्गदर्शन</h3>
+          <p>
+            युवा मंच संगठन युवाओं को सही दिशा, मार्गदर्शन और अवसरों से जोड़ने के लिए कार्य करता है। संगठन रोजगार, जॉब फेयर, करियर मार्गदर्शन, प्रतियोगी तैयारी और युवा विकास से जुड़ी पहलों के माध्यम से युवाओं को आत्मनिर्भर और जिम्मेदार बनाने का प्रयास करता है।
+          </p>
+          <div class="work-card-list">
+            <ul style="margin-top: 10px;">
+              <li>युवाओं को करियर और रोजगार से जुड़ा मार्गदर्शन</li>
+              <li>जॉब फेयर और रोजगार अवसरों से जुड़ी पहल</li>
+              <li>छात्र-युवाओं को सही दिशा में प्रेरित करना</li>
+              <li>युवाओं में आत्मविश्वास और नेतृत्व क्षमता बढ़ाना</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 7. संगठन विस्तार एवं युवा नेतृत्व -->
+        <div class="work-card" style="border-left: 5px solid var(--primary-blue);">
+          <div class="work-card-icon">💡</div>
+          <h3>7. संगठन विस्तार एवं युवा नेतृत्व</h3>
+          <p>
+            युवा मंच संगठन प्रत्येक प्रदेश और जिले में सक्रिय युवाओं को संगठनात्मक जिम्मेदारी देकर समाज सेवा और जनहित कार्यों से जोड़ने का प्रयास करता है। संगठन का उद्देश्य युवाओं में नेतृत्व क्षमता, जिम्मेदारी, सेवा भावना और समाज के प्रति सक्रिय भूमिका विकसित करना है।
+          </p>
+          <div class="work-card-list">
+            <ul style="margin-top: 10px;">
+              <li>सक्रिय युवाओं को संगठन से जोड़ना</li>
+              <li>प्रदेश, जिला और स्थानीय स्तर पर जिम्मेदारी देना</li>
+              <li>युवाओं में नेतृत्व और सेवा भावना विकसित करना</li>
+              <li>समाज सेवा और जनहित कार्यों में युवाओं की भागीदारी बढ़ाना</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Working Area Expansion Section -->
+      <section class="section-bg-light" style="border-radius: var(--radius-lg); margin-top: 16px;">
+        <div class="section-header" style="margin-bottom: 20px;">
+          <h3>हमारा कार्यक्षेत्र</h3>
+          <div style="display: inline-block; font-size: 0.82rem; font-weight: 600; color: var(--primary-orange); background-color: rgba(255, 122, 26, 0.1); padding: 5px 12px; border-radius: 20px; margin-bottom: 12px; border: 1px solid rgba(255, 122, 26, 0.15); margin-top: 8px;">
+            भारत के कई राज्यों में सक्रिय — Pan India विस्तार की दिशा में
+          </div>
+          <p style="margin-top: 8px;">युवा मंच संगठन भारत के कई राज्यों में समाज सेवा, जनहित और युवा नेतृत्व के कार्यों को आगे बढ़ा रहा है।</p>
+        </div>
+        
+        <div class="state-grid">
+          <div class="state-card">📍 उत्तर प्रदेश</div>
+          <div class="state-card">📍 उत्तराखंड</div>
+          <div class="state-card">📍 राजस्थान</div>
+          <div class="state-card">📍 मध्य प्रदेश</div>
+          <div class="state-card">📍 हरियाणा</div>
+          <div class="state-card">📍 पंजाब</div>
+          <div class="state-card">📍 गुजरात</div>
+          <div class="state-card">📍 हिमाचल प्रदेश</div>
+          <div class="state-card">📍 गोवा</div>
+          <div class="state-card">📍 महाराष्ट्र</div>
+          <div class="state-card">📍 ओडिशा</div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+          <p style="font-weight: 500; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+            <strong>विस्तार की दिशा:</strong> संगठन का उद्देश्य Pan India स्तर पर प्रत्येक प्रदेश और जिले में सक्रिय युवाओं को जोड़कर समाज सेवा, जनहित और जागरूकता कार्यों को आगे बढ़ाना है।
+          </p>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- ==========================================
+         VIEW 4: FOUNDER MESSAGE PAGE
+         ========================================== -->
+    <div id="founder" class="view-section">
+      <div class="section-header">
+        <h2>संस्थापक का संदेश</h2>
+        <p>युवा मंच संगठन के संस्थापक ध्रुव देव गुप्ता की ओर से समाज और युवाओं के लिए संदेश</p>
+      </div>
+
+      <div class="form-container" style="max-width: 900px; box-shadow: var(--shadow-md);">
+        <div style="text-align: center; margin-bottom: 30px;">
+          <img src="assetsimages/founder-dhruv-dev-gupta.jpg.png" alt="ध्रुव देव गुप्ता - संस्थापक" class="founder-img" style="width: 160px; height: 160px; margin: 0 auto 20px auto;">
+          <h3 style="color: var(--primary-blue); font-size: 1.6rem; margin-bottom: 4px;">ध्रुव देव गुप्ता</h3>
+          <p style="color: var(--primary-orange); font-weight: 600;">संस्थापक, युवा मंच संगठन</p>
+        </div>
+
+        <div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-dark);">
+          <p style="margin-bottom: 20px;">
+            युवा मंच संगठन की शुरुआत समाज सेवा, जनहित और युवा शक्ति को एक मंच देने के उद्देश्य से की गई। मेरा विश्वास है कि समाज में बदलाव केवल बातों से नहीं, बल्कि जिम्मेदार प्रयासों, निरंतर सेवा और युवाओं की सक्रिय भागीदारी से आता है।
+          </p>
+          <p style="margin-bottom: 20px;">
+            आज समाज में कई ऐसे मुद्दे हैं जिन्हें सही आवाज की जरूरत है। कई छात्र और अभिभावक अपनी समस्याओं को सही मंच तक पहुंचाना चाहते हैं। कई जरूरतमंद लोग सहायता की उम्मीद रखते हैं। कई युवा समाज के लिए कुछ करना चाहते हैं, लेकिन उन्हें सही दिशा और मंच नहीं मिल पाता। युवा मंच संगठन इन्हीं जरूरतों को ध्यान में रखकर कार्य करता है।
+          </p>
+          <p style="margin-bottom: 20px; font-weight: 500; color: var(--primary-blue);">
+            हमारा उद्देश्य है कि युवा समाज सेवा से जुड़ें, जनहित के मुद्दों को समझें और अपने क्षेत्र में सकारात्मक बदलाव लाने के लिए आगे आएं। संगठन समाज के हर उस व्यक्ति का स्वागत करता है, जिसके मन में सेवा, सहयोग और बदलाव की भावना है।
+          </p>
+          <p style="margin-bottom: 20px;">
+            युवा मंच संगठन किसी एक व्यक्ति का प्रयास नहीं, बल्कि समाज के लिए एक सामूहिक सोच है। हम चाहते हैं कि देश के अलग-अलग राज्यों में युवा और नागरिक समाज हित के कार्यों से जुड़ें और जरूरतमंद लोगों तक सहायता, जागरूकता और सहयोग पहुंचाएं।
+          </p>
+          <p style="margin-bottom: 20px;">
+            मैं सभी युवाओं, सामाजिक कार्यकर्ताओं और नागरिकों से अपील करता हूं कि वे समाज के प्रति अपनी जिम्मेदारी को समझें। यदि हर व्यक्ति अपने स्तर पर एक सकारात्मक कार्य करे, तो समाज में बड़ा बदलाव संभव है।
+          </p>
+          <p style="margin-bottom: 30px; font-weight: 600; text-align: center; color: var(--primary-green); font-size: 1.15rem;">
+            आइए, युवा मंच संगठन के साथ जुड़ें और समाज सेवा, जनहित और सकारात्मक बदलाव का हिस्सा बनें।
+          </p>
+        </div>
+
+        <div style="border-top: 1px solid var(--border-color); padding-top: 20px; text-align: right;">
+          <p style="font-weight: 700; color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 2px;">ध्रुव देव गुप्ता</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">संस्थापक, युवा मंच संगठन</p>
+        </div>
+      </div>
+
+      <!-- Mission, Vision & Values Page content integration for easy flow -->
+      <section style="margin-top: 20px;">
+        <div class="section-header" style="margin-bottom: 40px;">
+          <h2>हमारे मूल्य (Values)</h2>
+          <p>वह मूल्य जिन पर युवा मंच संगठन अडिग कार्य करता है</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <h4>सेवा भावना</h4>
+            <p>हम हर कार्य को समाज सेवा की भावना से करते हैं।</p>
+          </div>
+          <div class="value-card">
+            <h4>पारदर्शिता</h4>
+            <p>हमारा विश्वास साफ और जिम्मेदार कार्यशैली में है।</p>
+          </div>
+          <div class="value-card">
+            <h4>युवा शक्ति</h4>
+            <p>हम मानते हैं कि युवा समाज में सकारात्मक बदलाव ला सकते हैं।</p>
+          </div>
+          <div class="value-card">
+            <h4>जनहित</h4>
+            <p>समाज और जनता का हित हमारे लिए सर्वोपरि है।</p>
+          </div>
+          <div class="value-card">
+            <h4>समानता</h4>
+            <p>हम समाज के हर वर्ग के लिए समान भावना से काम करते हैं।</p>
+          </div>
+          <div class="value-card">
+            <h4>जिम्मेदारी</h4>
+            <p>हम हर सामाजिक कार्य को जिम्मेदारी और गंभीरता से लेते हैं।</p>
+          </div>
+          <div class="value-card">
+            <h4>सहयोग</h4>
+            <p>हम समाज, युवाओं और नागरिकों के सहयोग से कार्य करते हैं।</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- ==========================================
+         VIEW 5: MEDIA COVERAGE PAGE
+         ========================================== -->
+    <div id="media-coverage" class="view-section container">
+      <div class="section-header">
+        <h2>मीडिया कवरेज</h2>
+        <p>युवा मंच संगठन द्वारा किए गए समाज सेवा, छात्र हित, जनहित और जागरूकता से जुड़े कार्यों की समाचार पत्रों में प्रकाशित झलकियां।</p>
+      </div>
+
+      <p style="text-align: center; max-width: 800px; margin: -20px auto 30px auto; color: var(--text-muted);">
+        युवा मंच संगठन के कार्यों को समय-समय पर विभिन्न समाचार पत्रों में स्थान मिला है। यह मीडिया कवरेज संगठन के सामाजिक कार्यों, जनहित प्रयासों और युवाओं की सक्रिय भागीदारी का प्रमाण है।
+      </p>
+
+      <!-- Category Filter Buttons -->
+      <div class="media-filter">
+        <button class="media-filter-btn active" data-category="all">सभी</button>
+        <button class="media-filter-btn" data-category="service">समाज सेवा</button>
+        <button class="media-filter-btn" data-category="student">छात्र एवं शिक्षा हित</button>
+        <button class="media-filter-btn" data-category="public">जनहित मुद्दे</button>
+        <button class="media-filter-btn" data-category="awareness">युवा जागरूकता / युवा भागीदारी</button>
+        <button class="media-filter-btn" data-category="employment">सफाई / स्थानीय समस्या / नागरिक मुद्दे</button>
+        <button class="media-filter-btn" data-category="organisation">जरूरतमंद / पशु सेवा / मानवीय सहायता</button>
+      </div>
+
+      <!-- Media Card Grid (Rendered Dynamically by JS) -->
+      <div class="media-coverage-grid" id="media-grid"></div>
+
+      <!-- Pagination / Load More Button -->
+      <div class="load-more-container" id="load-more-container" style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+        <button id="load-more-btn" class="btn btn-orange">और देखें</button>
+      </div>
+
+      <!-- Action Box -->
+      <div class="cta-banner" style="margin-top: 60px;">
+        <h2>क्या आप भी समाज सेवा से जुड़ना चाहते हैं?</h2>
+        <p>युवा मंच संगठन से जुड़ें और समाज में सकारात्मक बदलाव का हिस्सा बनें।</p>
+        <a href="#join" class="btn btn-orange nav-trigger" data-view="join">हमसे जुड़ें</a>
+      </div>
+    </div>
+
+
+    <!-- ==========================================
+         VIEW 6: NEWS & BLOG PAGE
+         ========================================== -->
+    <div id="news" class="view-section">
+      <div class="section-header">
+        <h2>समाचार एवं अपडेट</h2>
+        <p>युवा मंच संगठन की सामाजिक पहल, विचार और ब्लॉग लेख</p>
+      </div>
+
+      <div class="news-grid">
+        
+        <!-- Post 1 -->
+        <article class="news-card">
+          <div class="news-card-body">
+            <div class="news-card-meta">श्रेणी: सामाजिक मुद्दे | युवा नेतृत्व</div>
+            <h3>1. समाज सेवा में युवाओं की भूमिका क्यों जरूरी है?</h3>
+            <p>
+              युवा समाज की सबसे बड़ी शक्ति हैं। यदि युवा अपनी ऊर्जा को सही दिशा में लगाएं, तो समाज में सकारात्मक बदलाव लाया जा सकता है। समाज सेवा केवल सहायता करने का काम नहीं है, बल्कि यह जिम्मेदारी, संवेदनशीलता और जागरूकता का प्रतीक है।
+            </p>
+            <p>
+              युवा मंच संगठन युवाओं को समाज सेवा से जोड़ने का प्रयास करता है, ताकि वे अपने क्षेत्र और समाज के विकास में सक्रिय भूमिका निभा सकें।
+            </p>
+            <div class="news-card-footer">
+              <span style="color: var(--primary-blue); font-weight: 600; font-size: 0.9rem;">युवा मंच संगठन ब्लॉग</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="news-card">
+          <div class="news-card-body">
+            <div class="news-card-meta">श्रेणी: शिक्षा | छात्र हित</div>
+            <h3>2. छात्र हित के मुद्दों पर आवाज उठाना क्यों जरूरी है?</h3>
+            <p>
+              छात्र किसी भी देश और समाज का भविष्य होते हैं। यदि छात्रों को सही शिक्षा, सुरक्षित वातावरण और उचित मार्गदर्शन मिले, तो वे समाज को आगे ले जा सकते हैं।
+            </p>
+            <p>
+              युवा मंच संगठन शिक्षा और छात्र हित से जुड़े मुद्दों को महत्वपूर्ण मानता है। हमारा प्रयास है कि छात्रों और अभिभावकों की आवाज को सही मंच मिले।
+            </p>
+            <div class="news-card-footer">
+              <span style="color: var(--primary-blue); font-weight: 600; font-size: 0.9rem;">युवा मंच संगठन ब्लॉग</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="news-card">
+          <div class="news-card-body">
+            <div class="news-card-meta">श्रेणी: जनहित | नागरिक जिम्मेदारी</div>
+            <h3>3. जनहित के मुद्दों पर समाज की भागीदारी क्यों जरूरी है?</h3>
+            <p>
+              जनहित के मुद्दे केवल किसी एक व्यक्ति की समस्या नहीं होते, बल्कि पूरे समाज से जुड़े होते हैं। चाहे वह स्थानीय स्वच्छता हो, नागरिक सुविधाएं हों या सामाजिक सुरक्षा हो। जब तक समाज के लोग स्वयं इन मुद्दों में भाग नहीं लेते और अपनी आवाज नहीं उठाते, तक तक वास्तविक सुधार संभव नहीं है।
+            </p>
+            <p>
+              युवा मंच संगठन का प्रयास है कि लोग अपने अधिकारों और कर्तव्यों के प्रति जागरूक बनें और सामूहिक प्रयासों का हिस्सा बनें।
+            </p>
+            <div class="news-card-footer">
+              <span style="color: var(--primary-blue); font-weight: 600; font-size: 0.9rem;">युवा मंच संगठन ब्लॉग</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- ==========================================
+         VIEW 7: DONATION / COOPERATION PAGE
+         ========================================== -->
+    <div id="donation" class="view-section container">
+      <div class="section-header">
+        <h2>सहयोग करें</h2>
+        <p>आपका छोटा सहयोग समाज सेवा, जनहित और जरूरतमंद लोगों की मदद में बड़ा योगदान बन सकता है।</p>
+      </div>
+
+      <div class="contact-grid" style="align-items: start;">
+        
+        <!-- Left Side: Information Card -->
+        <div class="contact-info-card" style="border-top-color: var(--primary-orange);">
+          <h3>सहयोग एवं योगदान</h3>
+          <p style="margin-bottom: 20px; font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);">
+            युवा मंच संगठन एक सामाजिक संस्था है जो समाज सेवा, जनहित और समाज सुधार के कार्यों के लिए समर्पित है। हमारा प्रयास है कि हर जरूरतमंद व्यक्ति तक मदद पहुंचे। आपका छोटा सा योगदान भी इस अभियान में बड़ी भूमिका निभा सकता है।
+          </p>
           
-          <!-- 1. Left Card: Campus Learning -->
-          <div class="loop-card campus-card">
-            <div class="loop-card-image-wrap">
-              <img src="assets/images/institution-campus-01.jpg" alt="Campus Learning environment" class="loop-card-img">
-            </div>
-            <div class="loop-card-content">
-              <h3 class="loop-card-title">Campus Learning</h3>
-              <p class="loop-card-text">
-                Students build academic foundations, subject knowledge, and structured learning within the college environment.
-              </p>
-            </div>
-          </div>
+          <h4 style="color: var(--primary-blue); font-size: 1.2rem; margin-bottom: 12px; font-weight: 700;">आपका सहयोग इन कार्यों में मदद करता है:</h4>
+          <ul class="why-list" style="gap: 12px; margin-bottom: 24px;">
+            <li class="why-item" style="border-left-color: var(--primary-orange); padding: 12px 18px;"><span class="why-item-icon" style="color: var(--primary-orange);">✓</span> जरूरतमंदों के लिए भोजन, वस्त्र एवं आवश्यक राहत सामग्री</li>
+            <li class="why-item" style="border-left-color: var(--primary-green); padding: 12px 18px;"><span class="why-item-icon" style="color: var(--primary-green);">✓</span> गरीब एवं मेधावी छात्रों के लिए शिक्षा सामग्री एवं मार्गदर्शन</li>
+            <li class="why-item" style="border-left-color: var(--primary-blue); padding: 12px 18px;"><span class="why-item-icon" style="color: var(--primary-blue);">✓</span> सामाजिक एवं नागरिक जागरूकता अभियान</li>
+            <li class="why-item" style="border-left-color: var(--primary-orange); padding: 12px 18px;"><span class="why-item-icon" style="color: var(--primary-orange);">✓</span> स्थानीय जनहित समस्याओं के समाधान की दिशा में प्रयास</li>
+          </ul>
+        </div>
 
-          <!-- 2. Center Connector Model -->
-          <div class="loop-center-connector">
-            <h3 class="loop-center-title">CORPORA Connects Both</h3>
+        <!-- Right: QR Code scanner card -->
+        <div class="form-container" style="margin: 0; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px 24px; box-shadow: var(--shadow-lg); border-top: 5px solid var(--primary-green);">
+          <h3 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.5rem;">QR Code द्वारा सहयोग</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">अपने किसी भी UPI App (GPay, PhonePe, Paytm, BHIM) से स्कैन करके भुगतान करें</p>
+          
+          <!-- UPI QR Code image -->
+          <img src="assetsimages/donation-qr.png" alt="युवा मंच संगठन डोनेशन क्यूआर कोड" class="donation-qr-image">
+          
+          <h4 style="color: var(--primary-blue); font-weight: 700; font-size: 1.15rem; margin-bottom: 8px;">QR Code स्कैन करके सहयोग करें</h4>
+          
+          <p style="color: var(--primary-orange); font-size: 0.85rem; font-weight: 600; line-height: 1.5; max-width: 320px; margin-bottom: 24px;">
+            ⚠️ Payment करने के बाद कृपया अपना नाम और स्क्रीनशॉट WhatsApp पर साझा करें।
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ==========================================
+         VIEW 8: JOIN US / VOLUNTEER REGISTRATION FORM
+         ========================================== -->
+    <div id="join" class="view-section container">
+      <div class="section-header">
+        <h2>हमसे जुड़ें</h2>
+        <p>युवा मंच संगठन से जुड़ने के लिए नीचे दिया गया फॉर्म भरें।</p>
+      </div>
+
+      <div class="form-container">
+        <!-- Form Alert Messages -->
+        <div id="join-alert-success" class="form-alert form-alert-success">
+          बधाई हो! आपका आवेदन सफलतापूर्वक सबमिट हो गया है। हमारी टीम जल्द ही आपसे संपर्क करेगी।
+        </div>
+        <div id="join-alert-error" class="form-alert form-alert-error">
+          कृपया सभी आवश्यक फ़ील्ड सही-सही भरें।
+        </div>
+
+
+        <form id="join-us-form" novalidate>
+          <input type="hidden" name="access_key" value="1a149220-2354-42e0-a769-ebdf358de0f8">
+          <input type="hidden" name="subject" value="New Join Form Submission from Yuva Manch Website">
+          <div class="form-grid">
             
-            <div class="loop-pathway-container">
-              <!-- Connector pathway line -->
-              <div class="loop-line-path"></div>
-              
-              <!-- Loop Steps -->
-              <div class="loop-step" data-step="1">
-                <span class="step-num">01</span>
-                <span class="step-label">Career Counselling</span>
-              </div>
-              <div class="loop-step" data-step="2">
-                <span class="step-num">02</span>
-                <span class="step-label">Skill Assessment</span>
-              </div>
-              <div class="loop-step" data-step="3">
-                <span class="step-num">03</span>
-                <span class="step-label">Practical Training</span>
-              </div>
-              <div class="loop-step" data-step="4">
-                <span class="step-num">04</span>
-                <span class="step-label">Industry Exposure</span>
-              </div>
-              <div class="loop-step" data-step="5">
-                <span class="step-num">05</span>
-                <span class="step-label">Career Readiness</span>
+            <div class="form-group">
+              <label for="join-name">पूरा नाम <span style="color: red;">*</span></label>
+              <input type="text" id="join-name" name="name" placeholder="अपना पूरा नाम दर्ज करें" required>
+            </div>
+
+            <div class="form-group">
+              <label for="join-phone">मोबाइल नंबर <span style="color: red;">*</span></label>
+              <input type="tel" id="join-phone" name="phone" placeholder="10 अंकों का मोबाइल नंबर" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+              <label for="join-whatsapp">WhatsApp नंबर</label>
+              <input type="tel" id="join-whatsapp" name="whatsapp" placeholder="WhatsApp नंबर (वैकल्पिक)">
+            </div>
+
+            <div class="form-group">
+              <label for="join-age">उम्र</label>
+              <input type="number" id="join-age" name="age" min="15" max="100" placeholder="अपनी उम्र दर्ज करें">
+            </div>
+
+            <div class="form-group">
+              <label for="join-city">शहर / जिला <span style="color: red;">*</span></label>
+              <input type="text" id="join-city" name="city" placeholder="अपने शहर/जिले का नाम" required>
+            </div>
+
+            <div class="form-group">
+              <label for="join-state">राज्य <span style="color: red;">*</span></label>
+              <select id="join-state" name="state" required>
+                <option value="" disabled selected>-- राज्य चुनें --</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Goa">Goa</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Other">अन्य (Other)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="join-profession">व्यवसाय <span style="color: red;">*</span></label>
+              <select id="join-profession" name="profession" required>
+                <option value="" disabled selected>-- व्यवसाय चुनें --</option>
+                <option value="Student">Student (छात्र)</option>
+                <option value="Professional">Professional (व्यवसायी)</option>
+                <option value="Social Worker">Social Worker (सामाजिक कार्यकर्ता)</option>
+                <option value="Other">अन्य (Other)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="join-role">आप किस रूप में जुड़ना चाहते हैं? <span style="color: red;">*</span></label>
+              <select id="join-role" name="role" required>
+                <option value="" disabled selected>-- भूमिका चुनें --</option>
+                <option value="प्रदेश अध्यक्ष">प्रदेश अध्यक्ष</option>
+                <option value="जिला अध्यक्ष">जिला अध्यक्ष</option>
+                <option value="उपाध्यक्ष">उपाध्यक्ष</option>
+                <option value="सदस्य">सदस्य</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label>क्या आप पहले किसी सामाजिक कार्य से जुड़े हैं? <span style="color: red;">*</span></label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="experience" value="Yes" required> हाँ (Yes)
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="experience" value="No"> नहीं (No)
+                </label>
               </div>
             </div>
 
-            <p class="loop-center-microcopy">
-              A structured learning model that helps students gain practical confidence during their academic journey.
-            </p>
-          </div>
-
-          <!-- 3. Right Card: Industry Exposure -->
-          <div class="loop-card industry-card">
-            <div class="loop-card-image-wrap">
-              <img src="assets/images/industry-hands-on-training-02.jpg" alt="Industry hands-on training exposure" class="loop-card-img">
+            <div class="form-group form-group-full">
+              <label>आप किस क्षेत्र में काम करना चाहते हैं? <span style="color: red;">*</span></label>
+              <div class="form-checkbox-options">
+                <label class="checkbox-label"><input type="checkbox" name="interests" value="शिक्षा"> शिक्षा</label>
+                <label class="checkbox-label"><input type="checkbox" name="interests" value="समाज सेवा"> समाज सेवा</label>
+                <label class="checkbox-label"><input type="checkbox" name="interests" value="जरूरतमंदों की सहायता"> जरूरतमंदों की सहायता</label>
+                <label class="checkbox-label"><input type="checkbox" name="interests" value="जागरूकता अभियान"> जागरूकता अभियान</label>
+                <label class="checkbox-label"><input type="checkbox" name="interests" value="छात्र हित"> छात्र हित</label>
+                <label class="checkbox-label"><input type="checkbox" name="interests" value="जनहित मुद्दे"> जनहित मुद्दे</label>
+              </div>
             </div>
-            <div class="loop-card-content">
-              <h3 class="loop-card-title">Industry Exposure</h3>
-              <p class="loop-card-text">
-                Students gain hands-on understanding, technical familiarity, and real workplace awareness through industry-connected learning.
-              </p>
+
+            <div class="form-group form-group-full">
+              <label for="join-message">आपका संदेश</label>
+              <textarea id="join-message" name="message" rows="4" placeholder="संगठन के लिए आपका संदेश या विचार..."></textarea>
             </div>
+
           </div>
 
-        </div>
-
-        <!-- Value Blocks Below -->
-        <div class="loop-value-blocks">
-          <div class="loop-value-block">
-            <span class="value-block-pill">For Colleges</span>
-            <h3 class="value-block-title">For Colleges & Institutions</h3>
-            <p class="value-block-desc">
-              Support students with structured career readiness, practical exposure, and employability development alongside academic learning.
-            </p>
-            <a href="institutions.html" class="value-block-link">Learn More <span class="link-arrow">→</span></a>
-          </div>
-
-          <div class="loop-value-block">
-            <span class="value-block-pill">For Industry</span>
-            <h3 class="value-block-title">For Industry Partners</h3>
-            <p class="value-block-desc">
-              Engage with students early and help shape future-ready talent through guided exposure, practical learning, and professional readiness.
-            </p>
-            <a href="industry-connect.html" class="value-block-link">Learn More <span class="link-arrow">→</span></a>
-          </div>
-        </div>
-
+          <button type="submit" class="btn btn-orange form-submit-btn">युवा मंच संगठन से जुड़ें</button>
+        </form>
       </div>
-    </section>
+    </div>
 
-    <!-- 9. Final CTA / Enquiry Section -->
-        <!-- Reusable Compact Final CTA Section -->
-    <section class="final-cta-section">
-      <div class="final-cta">
-        <div class="cta-pill">LEARN IN COLLEGE. EXPERIENCE INDUSTRY.</div>
-        <h2>Gain real industry exposure while you study.</h2>
-        <p>CORPORA helps students go beyond classroom learning by connecting them with practical training, hands-on industry experience, career guidance, and workplace readiness during their academic journey.</p>
-        <div class="cta-actions">
-          <a href="students.html" class="btn-primary">Start Your Industry Readiness Journey</a>
-          <a href="students.html" class="btn-secondary">Explore Student Program</a>
-        </div>
-      </div>
-    </section>
   </main>
 
-<!-- 10. Footer Section -->
-  <footer class="main-footer" id="footer-reveal-block">
-    <div class="container footer-container">
-      
-      <!-- Top Footer: 3 Spacious Columns -->
-      <div class="footer-top-grid">
-        <!-- Column 1: Brand Info -->
-        <div class="footer-col brand-col">
-          <a href="index.html" class="footer-logo-link logo-capsule">
-            <img src="assets/images/corpora-logo.png.png" alt="CORPORA Logo" class="footer-logo-img">
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <!-- EDITABLE: Replace logo.png with your logo if needed -->
+          <img src="logo.png" alt="युवा मंच संगठन लोगो">
+          <span class="footer-logo-text">युवा मंच संगठन</span>
+        </div>
+        <p style="font-size: 0.85rem; margin-bottom: 15px;">
+          युवा मंच संगठन समाज सेवा, जनहित और युवा जागरूकता के लिए समर्पित एक सामाजिक मंच है। संगठन का उद्देश्य समाज के हर वर्ग की आवाज को सम्मान देना, जरूरतमंदों की सहायता करना और युवाओं को सकारात्मक बदलाव से जोड़ना है।
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>त्वरित लिंक्स</h3>
+        <ul class="footer-links">
+          <li><a href="#home" class="nav-trigger" data-view="home">होम</a></li>
+          <li><a href="#about" class="nav-trigger" data-view="about">हमारे बारे में</a></li>
+          <li><a href="#work" class="nav-trigger" data-view="work">हमारे कार्य</a></li>
+          <li><a href="#founder" class="nav-trigger" data-view="founder">संस्थापक संदेश</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>अन्य लिंक्स</h3>
+        <ul class="footer-links">
+          <li><a href="#media-coverage" class="nav-trigger" data-view="media-coverage">मीडिया कवरेज</a></li>
+          <li><a href="#donation" class="nav-trigger" data-view="donation">सहयोग करें</a></li>
+          <li><a href="#join" class="nav-trigger" data-view="join">हमसे जुड़ें</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>संपर्क एवं सोशल मीडिया</h3>
+        <p style="font-size: 0.85rem; margin-top: 12px; margin-bottom: 24px;">✉️ <a href="mailto:mgdhruv749@gmail.com" class="footer-contact-link">mgdhruv749@gmail.com</a></p>
+        
+        <div class="footer-social-links">
+          <!-- EDITABLE: Add your organization Facebook page link below -->
+          <a href="https://www.facebook.com/YUVAMANCHSANGTHANCOM" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
           </a>
-          <p class="footer-description">
-            CORPORA helps students move from academic learning to industry readiness through career readiness, practical training, and mentorship.
-          </p>
-        </div>
-        
-        <!-- Column 2: Quick Links -->
-        <div class="footer-col links-col">
-          <h4 class="footer-col-title">Quick Links</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="about.html" class="footer-link">About</a></li>
-            <li><a href="students.html" class="footer-link">Students</a></li>
-            <li><a href="institutions.html" class="footer-link">Institutions</a></li>
-            <li><a href="industry-connect.html" class="footer-link">Industry Connect</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-        
-        <!-- Column 3: Focus Areas -->
-        <div class="footer-col links-col">
-          <h4 class="footer-col-title">Focus Areas</h4>
-          <ul class="footer-links-list">
-            <li><a href="#students" class="footer-link">Practical Training</a></li>
-            <li><a href="#students" class="footer-link">Career Counselling</a></li>
-            <li><a href="#students" class="footer-link">Skill Assessment</a></li>
-            <li><a href="#students" class="footer-link">Interview Preparation</a></li>
-            <li><a href="#students" class="footer-link">Placement Readiness</a></li>
-          </ul>
+          <!-- EDITABLE: Add your organization Instagram link below -->
+          <a href="https://www.instagram.com/d_h_r_u_v_dev_g_u_p_t_a" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <!-- EDITABLE: Add your organization YouTube link below -->
+          <a href="https://youtube.com/#" target="_blank" class="social-icon-btn" title="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
         </div>
       </div>
-      
-      <!-- Subtle Divider Line -->
-      <div class="footer-divider"></div>
-      
-      <!-- Bottom Footer Row -->
-      <div class="footer-bottom-row">
-        <div class="footer-copyright">
-          © 2026 CORPORA. All rights reserved.
-        </div>
-        <div class="footer-taglines">
-          <span>Career Readiness</span>
-          <span class="tagline-dot">•</span>
-          <span>Industry–Academia</span>
-          <span class="tagline-dot">•</span>
-          <span>Student Growth</span>
-        </div>
-      </div>
-      
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 युवा मंच संगठन. सर्वाधिकार सुरक्षित।</p>
     </div>
   </footer>
 
-  <!-- Interaction Logic Script -->
-  <script src="app.js"></script>
+  <!-- Image Lightbox Modal -->
+  <div id="media-lightbox" class="lightbox-modal">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="मीडिया कवरेज पूरा देखें">
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
